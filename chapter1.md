@@ -2,7 +2,6 @@
 title       : Basics
 description : Operations, Variables, and Data Types
 attachments :
-  slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
 ---
 ## Variables and Operations
