@@ -34,8 +34,6 @@ key: 15d729634a
 # Calculate the log of (5 squared - 8)
 log(5^2-8)
 
-
-
 ```
 
 `@sct`
@@ -44,6 +42,7 @@ test_output_contains("18", incorrect_msg = "Make sure to calculate log of (5^2 -
 success_msg("Great!")
 
 ```
+***
 
 
 `@instructions`
