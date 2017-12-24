@@ -10,6 +10,7 @@ attachments :
 type: BulletExercise
 xp: 100
 skills: 1
+key: 15d729634a
 ```
 
 `@pre_exercise_code`
@@ -24,6 +25,7 @@ skills: 1
 ```yaml
 type: NormalExercise
 xp: 50
+key: a0168e83cf
 ```
 
 `@instructions`
@@ -58,6 +60,7 @@ success_msg("Great!")
 ```yaml
 type: NormalExercise
 xp: 50
+key: 88da30b5af
 ```
 
 `@instructions`
