@@ -1,51 +1,57 @@
 ---
-title       : Insert the chapter title here
-description : Insert the chapter description here
+title       : Basics
+description : Operations, Variables, and Data Types
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
 ---
-## A really bad movie
+## Variables and Operations
 
 ```yaml
-type: MultipleChoiceExercise
-lang: r
-xp: 50
+type: NormalExercise
+xp: 100
 skills: 1
-key: 897355da35
+key: 15d729634a
 ```
 
-Have a look at the plot that showed up in the viewer to the right. Which type of movie has the worst rating assigned to it?
-
 `@instructions`
-- Adventure
-- Action
-- Animation
-- Comedy
+- Without defining a new variable, calculate the log of (5 squared - 8).
+- Create a new variable, called **value1**, equal to 
 
 `@hint`
-Have a look at the plot. Which color does the point with the lowest rating have?
+Just add a line of R code that calculates the sum of 6 and 12, just like the example in the sample code!
 
 `@pre_exercise_code`
 ```{r}
-# The pre exercise code runs code to initialize the user's workspace.
-# You can use it to load packages, initialize datasets and draw a plot in the viewer
+# no pec
+```
 
-movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv")
+`@sample_code`
+```{r}
+# Calculate 3 + 4
+3 + 4
 
-library(ggplot2)
+# Calculate 6 + 12
 
-ggplot(movies, aes(x = runtime, y = rating, col = genre)) + geom_point()
+```
+
+`@solution`
+```{r}
+# Calculate 3 + 4
+3 + 4
+
+# Calculate 6 + 12
+6 + 12
 ```
 
 `@sct`
 ```{r}
-# SCT written with testwhat: https://github.com/datacamp/testwhat/wiki
-
-msg_bad <- "That is not correct!"
-msg_success <- "Exactly! There seems to be a very bad action movie in the dataset."
-test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad, msg_bad))
+test_output_contains("18", incorrect_msg = "Make sure to add `6 + 12` on a new line. Do not start the line with a `#`, otherwise your R code is not executed!")
+success_msg("Awesome! See how the console shows the result of the R code you submitted? Now that you're familiar with the interface, let's get down to R business!")
 ```
+
+
+
 
 ---
 ## More movies
