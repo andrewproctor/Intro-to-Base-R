@@ -10,7 +10,6 @@ attachments :
 type: BulletExercise
 xp: 100
 skills: 1
-key: 15d729634a
 ```
 
 `@pre_exercise_code`
@@ -25,7 +24,6 @@ key: 15d729634a
 ```yaml
 type: NormalExercise
 xp: 50
-key: a0168e83cf
 ```
 
 `@instructions`
@@ -60,7 +58,6 @@ success_msg("Great!")
 ```yaml
 type: NormalExercise
 xp: 50
-key: 88da30b5af
 ```
 
 `@instructions`
@@ -72,6 +69,7 @@ You can print a variable just by entering it alone on a line.
 
 `@sample_code`
 ```{r}
+
 # Create the variable x.
 
 # Print the variable x.
@@ -93,6 +91,7 @@ x
 ```{r}
 test_object("x", undefined_msg = "Make sure to define a variable `x`.",
             incorrect_msg = "Make sure that you assign the correct value to `x`.") 
+test_output_contains("2.833213", incorrect_msg = "Make sure to print the variable x.")
 success_msg("Good job!")
 
 
