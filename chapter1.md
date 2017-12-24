@@ -16,10 +16,11 @@ key: 15d729634a
 
 `@instructions`
 - Without defining a new variable, calculate the log of (5 squared - 8).
-- Create a new variable, called **value1**, equal to 
+- Create a new variable, called **value1**, equal to thef formula above.
+- Print **value1**.
 
 `@hint`
-Just add a line of R code that calculates the sum of 6 and 12, just like the example in the sample code!
+You can print a variable just by entering it alone on a line.
 
 `@pre_exercise_code`
 ```{r}
@@ -28,20 +29,26 @@ Just add a line of R code that calculates the sum of 6 and 12, just like the exa
 
 `@sample_code`
 ```{r}
-# Calculate 3 + 4
-3 + 4
+# Calculate the log of (5 squared - 8)
 
-# Calculate 6 + 12
+# Create the variable value1.
+
+# Print the variable value1.
 
 ```
 
 `@solution`
 ```{r}
-# Calculate 3 + 4
-3 + 4
+# Calculate the log of (5 squared - 8)
+log(5^2-8)
 
-# Calculate 6 + 12
-6 + 12
+# Create the variable value1.
+value1 <- log(5^2-8)
+
+# Print the variable value1.
+value1
+
+
 ```
 
 `@sct`
