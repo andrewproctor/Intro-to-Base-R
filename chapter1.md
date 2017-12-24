@@ -10,17 +10,27 @@ attachments :
 type: BulletExercise
 xp: 100
 skills: 1
-key: 15d729634a
 ```
-
-`@instructions`
-- Without defining a new variable, calculate the log of (5 squared - 8).
-
 
 `@pre_exercise_code`
 ```{r}
 # no pec
 ```
+
+***
+
+## Calculate a value.
+
+```yaml
+type: NormalExercise
+xp: 50
+```
+
+`@instructions`
+- Without defining a new variable, calculate the log of (5 squared - 8).
+
+`@hint`
+You can take the log by using log().
 
 `@sample_code`
 ```{r}
@@ -37,12 +47,18 @@ log(5^2-8)
 
 `@sct`
 ```{r}
-test_output_contains("18", incorrect_msg = "Make sure to calculate log of (5^2 - 8) on a new line. Do not start the line with a `#`, otherwise your R code is not executed!")
+test_output_contains("2.833213", incorrect_msg = "Make sure to calculate log of (5^2 - 8) on a new line. Do not start the line with a `#`, otherwise your R code is not executed!")
 success_msg("Great!")
 
 ```
 ***
 
+## Define a variable.
+
+```yaml
+type: NormalExercise
+xp: 50
+```
 
 `@instructions`
 - Create a new variable, called ***x***, equal to the log of (5 squared - 8).
@@ -164,4 +180,5 @@ test_function("plot", args = "col")
 test_error()
 
 success_msg("Good work!")
+```
 ```
