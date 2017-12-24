@@ -8,7 +8,7 @@ attachments :
 ## Variables and Operations
 
 ```yaml
-type: NormalExercise
+type: BulletExercise
 xp: 100
 skills: 1
 key: 15d729634a
@@ -16,8 +16,39 @@ key: 15d729634a
 
 `@instructions`
 - Without defining a new variable, calculate the log of (5 squared - 8).
-- Create a new variable, called **value1**, equal to thef formula above.
-- Print **value1**.
+
+
+`@pre_exercise_code`
+```{r}
+# no pec
+```
+
+`@sample_code`
+```{r}
+# Calculate the log of (5 squared - 8)
+
+```
+
+`@solution`
+```{r}
+# Calculate the log of (5 squared - 8)
+log(5^2-8)
+
+
+
+```
+
+`@sct`
+```{r}
+test_output_contains("18", incorrect_msg = "Make sure to calculate log of (5^2 - 8) on a new line. Do not start the line with a `#`, otherwise your R code is not executed!")
+success_msg("Great!")
+
+```
+
+
+`@instructions`
+- Create a new variable, called ***x***, equal to the log of (5 squared - 8).
+- Print **x**.
 
 `@hint`
 You can print a variable just by entering it alone on a line.
@@ -29,33 +60,33 @@ You can print a variable just by entering it alone on a line.
 
 `@sample_code`
 ```{r}
-# Calculate the log of (5 squared - 8)
+# Create the variable x.
 
-# Create the variable value1.
-
-# Print the variable value1.
+# Print the variable x.
 
 ```
 
 `@solution`
 ```{r}
-# Calculate the log of (5 squared - 8)
-log(5^2-8)
+# Create the variable x.
+x <- log(5^2-8)
 
-# Create the variable value1.
-value1 <- log(5^2-8)
-
-# Print the variable value1.
-value1
+# Print the variable x.
+x
 
 
 ```
 
 `@sct`
 ```{r}
-test_output_contains("18", incorrect_msg = "Make sure to add `6 + 12` on a new line. Do not start the line with a `#`, otherwise your R code is not executed!")
-success_msg("Awesome! See how the console shows the result of the R code you submitted? Now that you're familiar with the interface, let's get down to R business!")
+test_object("x", undefined_msg = "Make sure to define a variable `x`.",
+            incorrect_msg = "Make sure that you assign the correct value to `x`.") 
+success_msg("Good job!")
+
+
 ```
+
+
 
 
 
