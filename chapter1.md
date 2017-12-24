@@ -53,11 +53,6 @@ success_msg("Great!")
 `@hint`
 You can print a variable just by entering it alone on a line.
 
-`@pre_exercise_code`
-```{r}
-# no pec
-```
-
 `@sample_code`
 ```{r}
 # Create the variable x.
