@@ -170,6 +170,70 @@ success_msg("Good job!")
 ---
 ## Data Object Types
 
+```yaml
+type: NormalExercise
+xp: 100
+```
+
+
+`@pre_exercise_code`
+```{r}
+
+a <- false
+b <- "42"
+
+
+```
+
+
+
+`@instructions`
+- Change variable A so that it is a logical variable (indicating false)
+- Change variable 
+
+`@hint`
+The remainder (or modulo) is indicated in R by %%.
+
+`@sample_code`
+```{r}
+# Create the variable y.
+
+
+# Create z, equal to x times y. 
+
+
+# Display the variable of z.
+
+
+
+```
+
+`@solution`
+```{r}
+# Create the variable y.
+y <- 12 %% 5
+
+# Create z, equal to x times y. 
+z <- x * y
+
+# Display the variable of z.
+z
+
+
+```
+
+`@sct`
+```{r}
+test_object("y", undefined_msg = "Make sure to define a variable `y`.",
+            incorrect_msg = "Make sure that you assign the correct value to `y`.") 
+test_object("z", undefined_msg = "Make sure to define a variable `z`.",
+            incorrect_msg = "Make sure that you assign the correct value to `z`.")            
+test_output_contains("5.666427", incorrect_msg = "Make sure to print the variable z.")
+success_msg("Good job!")
+
+
+```
+
 
 
 
