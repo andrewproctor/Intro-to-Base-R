@@ -9,6 +9,7 @@ description : Here is a short description.
 ```yaml
 type: BulletExercise
 xp: 100
+key: 09e7de1018
 ```
 
 `@pre_exercise_code`
@@ -23,6 +24,7 @@ xp: 100
 ```yaml
 type: NormalExercise
 xp: 50
+key: e692affcb7
 ```
 
 `@instructions`
@@ -58,6 +60,7 @@ success_msg("Great!")
 ```yaml
 type: NormalExercise
 xp: 100
+key: ea4a5cabf6
 ```
 
 `@pre_exercise_code`
@@ -109,6 +112,7 @@ success_msg("Good job!")
 ```yaml
 type: NormalExercise
 xp: 100
+key: d73368ff12
 ```
 
 
@@ -173,6 +177,7 @@ success_msg("Good job!")
 ```yaml
 type: NormalExercise
 xp: 100
+key: 713c8c8e22
 ```
 
 
