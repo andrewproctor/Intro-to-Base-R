@@ -85,7 +85,7 @@ x
 test_object("x", undefined_msg = "Make sure to define a variable `x`.",
             incorrect_msg = "Make sure that you assign the correct value to `x`.") 
 test_output_contains("2.833213", incorrect_msg = "Make sure to print the variable x.")
-success_msg("Good job!")
+success_msg("Great!")
 ```
 
 
@@ -149,7 +149,7 @@ test_object("y", undefined_msg = "Make sure to define a variable `y`.",
 test_object("z", undefined_msg = "Make sure to define a variable `z`.",
             incorrect_msg = "Make sure that you assign the correct value to `z`.")            
 test_output_contains("5.666427", incorrect_msg = "Make sure to print the variable z.")
-success_msg("Good job!")
+success_msg("Great!")
 
 ```
 ---
@@ -182,7 +182,6 @@ xp: 100
 ```
 
 `@instructions`
-
 Print objects a and b:
 
 `@hint`
@@ -254,5 +253,5 @@ a <- FALSE
 ```{r}
 test_object("a", undefined_msg = "Make sure to define a variable `a`.",
             incorrect_msg = "Make sure that you assign the correct value to `a`.") 
-success_msg("Good job!")
+success_msg("Great!")
 ```
