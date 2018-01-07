@@ -9,7 +9,6 @@ attachments :
 ```yaml
 type: BulletExercise
 xp: 100
-key: 15d729634a
 ```
 
 `@pre_exercise_code`
@@ -24,7 +23,6 @@ key: 15d729634a
 ```yaml
 type: NormalExercise
 xp: 50
-key: e64f112eed
 ```
 
 `@instructions`
@@ -60,7 +58,6 @@ success_msg("Great!")
 ```yaml
 type: NormalExercise
 xp: 100
-key: c4e91125fd
 ```
 
 `@pre_exercise_code`
@@ -112,7 +109,6 @@ success_msg("Good job!")
 ```yaml
 type: NormalExercise
 xp: 100
-key: bbede9b295
 ```
 
 
@@ -177,7 +173,6 @@ success_msg("Good job!")
 ```yaml
 type: NormalExercise
 xp: 100
-key: '5093070519'
 ```
 
 
@@ -193,21 +188,30 @@ b <- "42"
 
 
 `@instructions`
-- Change variable A so that it is a logical variable (indicating false)
-- Change variable 
+- Check if variable *a* is logical:
+- Change *a* so that it is a logical variable (indicating false).
+- Check if *b* is numeric:
+- Change variable *b* so that it is numeric.
 
 `@hint`
-The remainder (or modulo) is indicated in R by %%.
+You can check the structure of a variable by using *str()*.
+Logical statements should appear in all caps:  ie TRUE or FALSE.
 
 `@sample_code`
 ```{r}
-# Create the variable y.
+# Display variables a and b:
+a
+b
+
+# Determine the data type of *a*.
 
 
-# Create z, equal to x times y. 
+# Change *a* so that is a logical variable.
 
 
-# Display the variable of z.
+# Determine the data type of *b*
+
+# Change variable *b* so that it is numeric.
 
 
 
@@ -215,24 +219,29 @@ The remainder (or modulo) is indicated in R by %%.
 
 `@solution`
 ```{r}
-# Create the variable y.
-y <- 12 %% 5
+# Display variables a and b:
+a
+b
 
-# Create z, equal to x times y. 
-z <- x * y
+# Determine the data type of *a*.
+str(a)
 
-# Display the variable of z.
-z
+# Change *a* so that is a logical variable.
+a <- FALSE
+
+# Determine the data type of *b*
+str(b)
+
+# Change variable *b* so that it is numeric.
+b <-as.numeric(b)
 
 
 ```
 
 `@sct`
 ```{r}
-test_object("y", undefined_msg = "Make sure to define a variable `y`.",
-            incorrect_msg = "Make sure that you assign the correct value to `y`.") 
-test_object("z", undefined_msg = "Make sure to define a variable `z`.",
-            incorrect_msg = "Make sure that you assign the correct value to `z`.")            
+test_object("b", incorrect_msg = "Make sure that change b to a numeric variable, equal to 42") 
+test_object("a", incorrect_msg = "Make sure that change *a* to a numeric variable, equal to FALSE.")            
 test_output_contains("5.666427", incorrect_msg = "Make sure to print the variable z.")
 success_msg("Good job!")
 
