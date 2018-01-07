@@ -9,7 +9,6 @@ attachments :
 ```yaml
 type: BulletExercise
 xp: 100
-key: 15d729634a
 ```
 
 `@pre_exercise_code`
@@ -24,7 +23,6 @@ key: 15d729634a
 ```yaml
 type: NormalExercise
 xp: 50
-key: 458889cb63
 ```
 
 `@instructions`
@@ -60,7 +58,6 @@ success_msg("Great!")
 ```yaml
 type: NormalExercise
 xp: 100
-key: c4e91125fd
 ```
 
 `@pre_exercise_code`
@@ -79,7 +76,9 @@ You can print a variable just by entering it alone on a line.
 ```{r}
 # Create the variable x.
 
+
 # Print the variable x.
+
 
 ```
 
@@ -112,7 +111,6 @@ success_msg("Good job!")
 ```yaml
 type: NormalExercise
 xp: 100
-key: bbede9b295
 ```
 
 
@@ -177,7 +175,6 @@ success_msg("Good job!")
 ```yaml
 type: NormalExercise
 xp: 100
-key: '5093070519'
 ```
 
 
@@ -215,6 +212,7 @@ b
 
 
 # Determine the data type of *b*
+
 
 # Change variable *b* so that it is numeric.
 
