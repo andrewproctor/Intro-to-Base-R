@@ -17,7 +17,7 @@ key: bc36446b49
 - Without defining a new variable, calculate the log of (5 squared - 8).
 
 `@hint`
-You can take the log by using log().
+You can take the log by using log() function.
 
 `@sample_code`
 ```{r}
@@ -37,6 +37,7 @@ log(5^2-8)
 test_output_contains("2.833213", incorrect_msg = "Make sure to calculate log of (5^2 - 8) on a new line. Do not start the line with a `#`, otherwise your R code is not executed!")
 success_msg("Great!")
 ```
+
 ---
 
 
@@ -46,6 +47,7 @@ success_msg("Great!")
 type: NormalExercise
 xp: 100
 key: eda3643137
+```
 
 `@pre_exercise_code`
 ```{r}
@@ -255,3 +257,4 @@ test_object("a", undefined_msg = "Make sure to define a variable `a`.",
             incorrect_msg = "Make sure that you assign the correct value to `a`.") 
 success_msg("Great!")
 ```
+
