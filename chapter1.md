@@ -150,15 +150,15 @@ test_output_contains("5.666427", incorrect_msg = "Make sure to print the variabl
 success_msg("Great!")
 
 ```
+
 ---
 
 ## Data Types
 
 ```yaml
-type: BulletExercise
-key: a9fb759d8f
-lang: r
-xp: 100
+type: BulletExercise 
+lang: r 
+xp: 150 
 ```
 
 
@@ -252,3 +252,4 @@ test_object("a", undefined_msg = "Make sure to define a variable `a`.",
 success_msg("Great!")
 ```
 
+---
