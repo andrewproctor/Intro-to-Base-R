@@ -98,8 +98,6 @@ success_msg("Great!")
 ```yaml
 type: NormalExercise
 xp: 100
-type: NormalExercise
-xp: 100
 key: 2c80ac45d5
 
 `@pre_exercise_code`
@@ -155,6 +153,7 @@ success_msg("Great!")
 
 ```
 ---
+
 ## Data Types
 
 ```yaml
