@@ -9,7 +9,6 @@ description : Here is a short description.
 ```yaml
 type: BulletExercise
 xp: 100
-key: 09e7de1018
 ```
 
 `@pre_exercise_code`
@@ -24,7 +23,6 @@ key: 09e7de1018
 ```yaml
 type: NormalExercise
 xp: 50
-key: e692affcb7
 ```
 
 `@instructions`
@@ -60,7 +58,6 @@ success_msg("Great!")
 ```yaml
 type: NormalExercise
 xp: 100
-key: ea4a5cabf6
 ```
 
 `@pre_exercise_code`
@@ -112,7 +109,6 @@ success_msg("Good job!")
 ```yaml
 type: NormalExercise
 xp: 100
-key: d73368ff12
 ```
 
 
@@ -171,13 +167,11 @@ success_msg("Good job!")
 
 ```
 
----
-## Data Object Types
+---## Data Object Types
 
 ```yaml
 type: NormalExercise
 xp: 100
-key: 713c8c8e22
 ```
 
 
@@ -235,8 +229,6 @@ test_object("z", undefined_msg = "Make sure to define a variable `z`.",
             incorrect_msg = "Make sure that you assign the correct value to `z`.")            
 test_output_contains("5.666427", incorrect_msg = "Make sure to print the variable z.")
 success_msg("Good job!")
-
-
 ```
 
 

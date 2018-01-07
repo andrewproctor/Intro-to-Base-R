@@ -7,9 +7,8 @@ attachments :
 ## Variables and Operations
 
 ```yaml
-type: BulletExercise
+type: NormalExercise
 xp: 100
-key: 15d729634a
 ```
 
 `@pre_exercise_code`
@@ -24,7 +23,6 @@ key: 15d729634a
 ```yaml
 type: NormalExercise
 xp: 50
-key: 3b5ee798bd
 ```
 
 `@instructions`
@@ -60,7 +58,6 @@ success_msg("Great!")
 ```yaml
 type: NormalExercise
 xp: 100
-key: c4e91125fd
 ```
 
 `@pre_exercise_code`
@@ -114,7 +111,6 @@ success_msg("Good job!")
 ```yaml
 type: NormalExercise
 xp: 100
-key: bbede9b295
 ```
 
 
@@ -173,53 +169,96 @@ success_msg("Good job!")
 
 ```
 
+
+
+
+```
 ---
-## Data Object Types
+## Data Types
 
 ```yaml
-type: NormalExercise
+type: BulletExercise
+key: a9fb759d8f
+lang: r
 xp: 100
-key: '5093070519'
 ```
 
 
 `@pre_exercise_code`
 ```{r}
-
 a <- false
 b <- "42"
-
 
 ```
 
 
 
+***
+
+### Display objects *a* and *b*
+
+```yaml
+type: NormalExercise
+xp: 100
+```
+
 `@instructions`
-- Check if variable *a* is logical:
-- Change *a* so that it is a logical variable (indicating false).
-- Check if *b* is numeric:
-- Change variable *b* so that it is numeric.
+
+Print objects *a* and *b*:
 
 `@hint`
-You can check the structure of a variable by using *str()*.
-Logical statements should appear in all caps:  ie TRUE or FALSE.
+
+To display an object, just enter it on a separate line.
 
 `@sample_code`
 ```{r}
-# Display variables a and b:
+
+# Display *a* and *b*
+
+```
+
+`@solution`
+```{r}
+# Display *a* and *b*
 a
 b
 
-# Determine the data type of *a*.
+
+```
+
+`@sct`
+```{r}
+test_output_contains("42", incorrect_msg = "Make sure to print the variable b.")
+test_output_contains("false", incorrect_msg = "Make sure to print the variable b.")
+success_msg("Good job!")
+```
+
+***
+
+### A logical object
+
+```yaml
+type: NormalExercise
+xp: 100
+```
+
+`@instructions`
+
+- Test whether object *a* is a logical data type.
+- Convert object *a* to logical.
+
+`@hint`
+
+- You can view information about the structure of an object by using the str() command.
+- Logical arguments should be in all caps.
+
+`@sample_code`
+```{r}
+
+# Check the structure of *a*.
 
 
-# Change *a* so that is a logical variable.
-
-
-# Determine the data type of *b*
-
-
-# Change variable *b* so that it is numeric.
+# Convert *a* to logical.
 
 
 
@@ -227,35 +266,18 @@ b
 
 `@solution`
 ```{r}
-# Display variables a and b:
-a
-b
 
-# Determine the data type of *a*.
+# Check the structure of *a*.
 str(a)
 
-# Change *a* so that is a logical variable.
+# Convert *a* to logical.
 a <- FALSE
 
-# Determine the data type of *b*
-str(b)
-
-# Change variable *b* so that it is numeric.
-b <-as.numeric(b)
 
 
 ```
 
 `@sct`
 ```{r}
-test_object("a", undefined_msg = "Make sure to define a variable `a`.",
-            incorrect_msg = "Make sure that you assign the correct value to `a`.") 
-success_msg("Good job!")
-
-```
-
-
-
-
 
 ```
