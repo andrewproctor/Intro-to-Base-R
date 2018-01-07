@@ -112,7 +112,7 @@ x <- log(5^2-8)
 - Display the value of z.
 
 `@hint`
-The remainder (or modulo) is indicated in R by %%.
+- The remainder (or modulo) is indicated in R by %%.
 
 `@sample_code`
 ```{r}
@@ -168,7 +168,6 @@ xp: 100
 ```{r}
 a <- false
 b <- "42"
-
 ```
 
 
@@ -179,15 +178,15 @@ b <- "42"
 
 ```yaml
 type: NormalExercise
-xp: 100
+xp: 30
 ```
 
 `@instructions`
-Print objects a and b:
+- Print objects a and b:
 
 `@hint`
 
-To display an object, just enter it on a separate line.
+- To display an object, just enter it on a separate line.
 
 `@sample_code`
 ```{r}
@@ -217,7 +216,7 @@ success_msg("Good job!")
 
 ```yaml
 type: NormalExercise
-xp: 100
+xp: 30
 ```
 
 `@instructions`
