@@ -1,7 +1,6 @@
 ---
 title       : Basics
 description : Operations, Variables, and Data Types
-attachments :
 
 ---
 
@@ -9,7 +8,7 @@ attachments :
 
 ```yaml
 type: NormalExercise
-xp: 50
+xp: 100
 key: bc36446b49
 ```
 
@@ -125,7 +124,6 @@ x <- log(5^2-8)
 # Display the variable of z.
 
 
-
 ```
 
 `@solution`
@@ -169,8 +167,6 @@ xp: 100
 a <- false
 b <- "42"
 ```
-
-
 
 ***
 
