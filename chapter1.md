@@ -9,6 +9,7 @@ attachments :
 ```yaml
 type: BulletExercise
 xp: 100
+key: 15d729634a
 ```
 
 `@pre_exercise_code`
@@ -23,6 +24,7 @@ xp: 100
 ```yaml
 type: NormalExercise
 xp: 50
+key: 3b5ee798bd
 ```
 
 `@instructions`
@@ -58,6 +60,7 @@ success_msg("Great!")
 ```yaml
 type: NormalExercise
 xp: 100
+key: c4e91125fd
 ```
 
 `@pre_exercise_code`
@@ -111,6 +114,7 @@ success_msg("Good job!")
 ```yaml
 type: NormalExercise
 xp: 100
+key: bbede9b295
 ```
 
 
@@ -175,6 +179,7 @@ success_msg("Good job!")
 ```yaml
 type: NormalExercise
 xp: 100
+key: '5093070519'
 ```
 
 
