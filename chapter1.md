@@ -9,7 +9,6 @@ attachments :
 ```yaml
 type: BulletExercise
 xp: 100
-key: 15d729634a
 ```
 
 `@pre_exercise_code`
@@ -24,7 +23,6 @@ key: 15d729634a
 ```yaml
 type: NormalExercise
 xp: 50
-key: 2cec4e18a3
 ```
 
 `@instructions`
@@ -60,7 +58,6 @@ success_msg("Great!")
 ```yaml
 type: NormalExercise
 xp: 100
-key: c4e91125fd
 ```
 
 `@pre_exercise_code`
@@ -112,7 +109,6 @@ success_msg("Good job!")
 ```yaml
 type: NormalExercise
 xp: 100
-key: bbede9b295
 ```
 
 
@@ -177,7 +173,6 @@ success_msg("Good job!")
 ```yaml
 type: NormalExercise
 xp: 100
-key: '5093070519'
 ```
 
 
@@ -245,11 +240,9 @@ b <-as.numeric(b)
 
 `@sct`
 ```{r}
-test_object("b", incorrect_msg = "Make sure that change b to a numeric variable, equal to 42") 
-test_object("a", incorrect_msg = "Make sure that change *a* to a numeric variable, equal to FALSE.")            
-test_output_contains("5.666427", incorrect_msg = "Make sure to print the variable z.")
+test_object("a", undefined_msg = "Make sure to define a variable `a`.",
+            incorrect_msg = "Make sure that you assign the correct value to `a`.") 
 success_msg("Good job!")
-
 
 ```
 
