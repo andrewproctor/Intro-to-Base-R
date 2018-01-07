@@ -44,7 +44,6 @@ success_msg("Great!")
 
 ```yaml
 type: NormalExercise
-type: NormalExercise
 xp: 100
 key: eda3643137
 
