@@ -244,8 +244,8 @@ xp: 100
 
 `@instructions`
 
-- Test whether object *a* is a logical data type.
-- Convert object *a* to logical.
+- Test whether object a is a logical data type.
+- Convert object a to logical.
 
 `@hint`
 
@@ -255,7 +255,7 @@ xp: 100
 `@sample_code`
 ```{r}
 
-# Check the structure of *a*.
+# Check the structure of a.
 
 
 # Convert *a* to logical.
@@ -267,7 +267,7 @@ xp: 100
 `@solution`
 ```{r}
 
-# Check the structure of *a*.
+# Check the structure of a.
 str(a)
 
 # Convert *a* to logical.
@@ -279,5 +279,7 @@ a <- FALSE
 
 `@sct`
 ```{r}
-
+test_object("a", undefined_msg = "Make sure to define a variable `a`.",
+            incorrect_msg = "Make sure that you assign the correct value to `a`.") 
+success_msg("Good job!")
 ```
