@@ -4,25 +4,13 @@ description : Operations, Variables, and Data Types
 attachments :
 
 ---
-## Variables and Operations
-
-```yaml
-type: NormalExercise
-xp: 100
-```
-
-`@pre_exercise_code`
-```{r}
-# no pec
-```
-
-***
 
 ## Calculate a value.
 
 ```yaml
 type: NormalExercise
 xp: 50
+key: bc36446b49
 ```
 
 `@instructions`
@@ -48,7 +36,6 @@ log(5^2-8)
 ```{r}
 test_output_contains("2.833213", incorrect_msg = "Make sure to calculate log of (5^2 - 8) on a new line. Do not start the line with a `#`, otherwise your R code is not executed!")
 success_msg("Great!")
-
 ```
 ---
 
@@ -57,8 +44,9 @@ success_msg("Great!")
 
 ```yaml
 type: NormalExercise
+type: NormalExercise
 xp: 100
-```
+key: eda3643137
 
 `@pre_exercise_code`
 ```{r}
@@ -99,8 +87,6 @@ test_object("x", undefined_msg = "Make sure to define a variable `x`.",
             incorrect_msg = "Make sure that you assign the correct value to `x`.") 
 test_output_contains("2.833213", incorrect_msg = "Make sure to print the variable x.")
 success_msg("Good job!")
-
-
 ```
 
 
@@ -111,14 +97,14 @@ success_msg("Good job!")
 ```yaml
 type: NormalExercise
 xp: 100
-```
-
+type: NormalExercise
+xp: 100
+key: 2c80ac45d5
 
 `@pre_exercise_code`
 ```{r}
 x <- log(5^2-8)
 ```
-
 
 
 `@instructions`
@@ -166,12 +152,6 @@ test_object("z", undefined_msg = "Make sure to define a variable `z`.",
 test_output_contains("5.666427", incorrect_msg = "Make sure to print the variable z.")
 success_msg("Good job!")
 
-
-```
-
-
-
-
 ```
 ---
 ## Data Types
@@ -195,7 +175,7 @@ b <- "42"
 
 ***
 
-### Display objects *a* and *b*
+### Display objects a and b
 
 ```yaml
 type: NormalExercise
@@ -204,7 +184,7 @@ xp: 100
 
 `@instructions`
 
-Print objects *a* and *b*:
+Print objects a and b:
 
 `@hint`
 
@@ -212,14 +192,13 @@ To display an object, just enter it on a separate line.
 
 `@sample_code`
 ```{r}
-
-# Display *a* and *b*
+# Display a and b
 
 ```
 
 `@solution`
 ```{r}
-# Display *a* and *b*
+# Display a and b
 a
 b
 
@@ -254,26 +233,21 @@ xp: 100
 
 `@sample_code`
 ```{r}
-
 # Check the structure of a.
 
 
-# Convert *a* to logical.
-
+# Convert a to logical.
 
 
 ```
 
 `@solution`
 ```{r}
-
 # Check the structure of a.
 str(a)
 
-# Convert *a* to logical.
+# Convert a to logical.
 a <- FALSE
-
-
 
 ```
 
