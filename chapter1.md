@@ -1,6 +1,8 @@
 ---
-title       : Basics
-description : Operations, Variables, and Data Types
+title       : Basic objects and operations
+description : Introduction to basic math operations in R, variables, and data types.
+attachments :
+  slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
 ---
 
@@ -78,7 +80,6 @@ x <- log(5^2-8)
 # Print the variable x.
 x
 
-
 ```
 
 `@sct`
@@ -98,6 +99,7 @@ success_msg("Great!")
 type: NormalExercise
 xp: 100
 key: 2c80ac45d5
+```
 
 `@pre_exercise_code`
 ```{r}
@@ -136,8 +138,6 @@ z <- x * y
 
 # Display the variable of z.
 z
-
-
 ```
 
 `@sct`
@@ -151,105 +151,100 @@ success_msg("Great!")
 
 ```
 
----
 
+
+---
 ## Data Types
 
 ```yaml
-type: BulletExercise 
-lang: r 
-xp: 150 
+type: TabExercise
+key: 54b1efd4a9
+lang: r
+xp: 100
 ```
 
 
 `@pre_exercise_code`
 ```{r}
-a <- false
-b <- "42"
+a <- "false"
+
+```
+
+`@sample_code`
+```{r}
+# Display object a:
+
+
 ```
 
 ***
 
-### Display objects a and b
+### Display object a:
 
 ```yaml
 type: NormalExercise
-xp: 30
+xp: 50
 ```
 
 `@instructions`
-- Print objects a and b:
-
-`@hint`
-
-- To display an object, just enter it on a separate line.
-
-`@sample_code`
-```{r}
-# Display a and b
-
-```
+- Display object a:
 
 `@solution`
 ```{r}
-# Display a and b
+# Display objects a:
 a
-b
-
 
 ```
+
+`@hint`
+- To display an object, just enter it on a seperate line.
 
 `@sct`
 ```{r}
-test_output_contains("42", incorrect_msg = "Make sure to print the variable b.")
-test_output_contains("false", incorrect_msg = "Make sure to print the variable b.")
+test_output_contains("a", incorrect_msg = "Make sure to print the variable b.")
+
 success_msg("Good job!")
+
 ```
 
 ***
 
-### A logical object
+### Logical Data Type
 
 ```yaml
 type: NormalExercise
-xp: 30
+xp: 50
 ```
 
 `@instructions`
 
-- Test whether object a is a logical data type.
-- Convert object a to logical.
-
-`@hint`
-
-- You can view information about the structure of an object by using the str() command.
-- Logical arguments should be in all caps.
+- Check if object a is logical.
 
 `@sample_code`
 ```{r}
-# Check the structure of a.
-
-
-# Convert a to logical.
+# Determine the data type of object a
 
 
 ```
 
+
 `@solution`
 ```{r}
-# Check the structure of a.
+# Determine the data type of object a
 str(a)
 
-# Convert a to logical.
-a <- FALSE
-
 ```
+
+`@hint`
+
+- To check the type of an object, you can use str().
 
 `@sct`
 ```{r}
-test_object("a", undefined_msg = "Make sure to define a variable `a`.",
-            incorrect_msg = "Make sure that you assign the correct value to `a`.") 
-success_msg("Great!")
+```{r}
+test_function("round", "x", 
+    not_called_msg = "Make sure to call the function str()</code> to inspect the class of a.",
+              incorrect_msg = "Have you passed the correct variable to the function str()?"))
+              
+success_msg("Nice job!")
 ```
-
----
