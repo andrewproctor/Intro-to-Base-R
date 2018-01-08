@@ -184,6 +184,7 @@ a <- "false"
 ```yaml
 type: NormalExercise
 xp: 50
+key: dbcca7dbe3
 ```
 
 `@instructions`
@@ -214,6 +215,7 @@ success_msg("Good job!")
 ```yaml
 type: NormalExercise
 xp: 50
+key: 526339b7cb
 ```
 
 `@instructions`
