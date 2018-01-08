@@ -184,6 +184,7 @@ a <- "false"
 ```yaml
 type: NormalExercise
 xp: 50
+key: cf42f87aeb
 ```
 
 `@instructions`
@@ -214,6 +215,7 @@ success_msg("Good job!")
 ```yaml
 type: NormalExercise
 xp: 50
+key: 20e99b8ef8
 ```
 
 `@instructions`
@@ -256,6 +258,7 @@ success_msg("Nice job!")
 ```yaml
 type: NormalExercise
 xp: 50
+key: ebdf4a7245
 ```
 
 `@instructions`
@@ -319,6 +322,7 @@ b <- 42
 ```yaml
 type: NormalExercise
 xp: 50
+key: d62feab9ae
 ```
 
 `@instructions`
@@ -349,6 +353,7 @@ success_msg("Good job!")
 ```yaml
 type: NormalExercise
 xp: 50
+key: ff2f5d7fc4
 ```
 
 `@instructions`
