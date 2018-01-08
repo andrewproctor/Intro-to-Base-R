@@ -48,6 +48,8 @@ test_output_contains("numbers", incorrect_msg = "Make sure to display the `numbe
 
 ```
 
+---
+
 ## Creating a character vector
 
 
