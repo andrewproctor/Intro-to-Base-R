@@ -184,7 +184,6 @@ a <- "false"
 ```yaml
 type: NormalExercise
 xp: 50
-key: cf42f87aeb
 ```
 
 `@instructions`
@@ -215,7 +214,6 @@ success_msg("Good job!")
 ```yaml
 type: NormalExercise
 xp: 50
-key: 20e99b8ef8
 ```
 
 `@instructions`
@@ -258,7 +256,6 @@ success_msg("Nice job!")
 ```yaml
 type: NormalExercise
 xp: 50
-key: ebdf4a7245
 ```
 
 `@instructions`
@@ -292,7 +289,7 @@ success_msg("Nice job!")
 ```
 
 ---
-## Data Types ct'd
+## Data Types II
 
 ```yaml
 type: TabExercise
@@ -304,7 +301,7 @@ xp: 100
 
 `@pre_exercise_code`
 ```{r}
-b <- 42
+b <- "forty two"
 
 ```
 
@@ -322,7 +319,6 @@ b <- 42
 ```yaml
 type: NormalExercise
 xp: 50
-key: d62feab9ae
 ```
 
 `@instructions`
@@ -353,7 +349,6 @@ success_msg("Good job!")
 ```yaml
 type: NormalExercise
 xp: 50
-key: ff2f5d7fc4
 ```
 
 `@instructions`
@@ -385,6 +380,46 @@ class(b)
 test_or(test_function("str","object"),
         test_function("class","x"),
      incorrect_msg = "Have you passed the correct variable to the function?")
+success_msg("Nice job!")
+              
+```
+
+***
+
+### Converting to logical 
+
+```yaml
+type: NormalExercise
+xp: 50
+```
+
+`@instructions`
+
+- Convert *b* so that it is numeric.
+
+`@sample_code`
+```{r}
+# Make b numeric
+
+
+```
+
+
+`@solution`
+```{r}
+# Make b numeric
+b <- 42
+
+```
+
+`@hint`
+
+- Numeric values are defined in numbers (not text), without quotes.
+
+`@sct`
+```{r}
+test_object("b", undefined_msg = "Make sure to define a variable `b`.",
+            incorrect_msg = "Make sure that you assign the correct value to `b`.") 
 success_msg("Nice job!")
               
 ```
