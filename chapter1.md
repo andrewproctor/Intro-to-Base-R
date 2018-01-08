@@ -184,7 +184,6 @@ a <- "false"
 ```yaml
 type: NormalExercise
 xp: 50
-key: c18c91e0bf
 ```
 
 `@instructions`
@@ -202,7 +201,7 @@ a
 
 `@sct`
 ```{r}
-test_output_contains("a", incorrect_msg = "Make sure to print the variable b.")
+test_output_contains("a", incorrect_msg = "Make sure to print the variable a.")
 
 success_msg("Good job!")
 
@@ -210,12 +209,11 @@ success_msg("Good job!")
 
 ***
 
-### Logical Data Type
+### Checking data type
 
 ```yaml
 type: NormalExercise
 xp: 50
-key: b4ee71c6b4
 ```
 
 `@instructions`
@@ -235,6 +233,141 @@ key: b4ee71c6b4
 # Determine the data type of object a
 str(a)
 class(a)
+
+```
+
+`@hint`
+
+- To check the type of an object, you can use class() or str().
+
+`@sct`
+```{r}
+test_or(test_function("str","object"),
+        test_function("class","x"),
+     incorrect_msg = "Have you passed the correct variable to the function?")
+success_msg("Nice job!")
+              
+```
+
+***
+
+### Converting to logical 
+
+```yaml
+type: NormalExercise
+xp: 50
+```
+
+`@instructions`
+
+- Convert *a* so that it is logical object.
+
+`@sample_code`
+```{r}
+# Make a logical
+
+
+```
+
+
+`@solution`
+```{r}
+# Make a logical
+a <- FALSE
+```
+
+`@hint`
+
+- Logical values are in all caps, eg TRUE or FALSE.
+
+`@sct`
+```{r}
+test_object("a", undefined_msg = "Make sure to define a variable `a`.",
+            incorrect_msg = "Make sure that you assign the correct value to `a`.") 
+success_msg("Nice job!")
+              
+```
+
+---
+## Data Types ct'd
+
+```yaml
+type: TabExercise
+key: 8f0e54b951
+lang: r
+xp: 100
+```
+
+
+`@pre_exercise_code`
+```{r}
+b <- 42
+
+```
+
+`@sample_code`
+```{r}
+# Display object b
+
+
+```
+
+***
+
+### Display variable b:
+
+```yaml
+type: NormalExercise
+xp: 50
+```
+
+`@instructions`
+- Display object b.
+
+`@solution`
+```{r}
+# Display variable b
+b
+
+```
+
+`@hint`
+- To display an object, just enter it on a seperate line.
+
+`@sct`
+```{r}
+test_output_contains("b", incorrect_msg = "Make sure to print the variable b.")
+
+success_msg("Good job!")
+
+```
+
+***
+
+### Logical Data Type
+
+```yaml
+type: NormalExercise
+xp: 50
+```
+
+`@instructions`
+
+- Check if *b* is numeric.
+
+`@sample_code`
+```{r}
+# Determine the data type of object b
+
+
+```
+
+
+`@solution`
+```{r}
+# Determine the data type of object b
+str(b)
+class(b)
 
 ```
 
