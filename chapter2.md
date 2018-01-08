@@ -3,7 +3,7 @@ title       : Vectors, Matrices, and Data Frames
 description : Insert the chapter description here
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:acd9c7ffdd
-## Creating a Vector
+## Creating a vector
 
 
 *** =instructions
@@ -21,15 +21,21 @@ To create a vector, pass the elements into the function c(), which stands for co
 
 *** =sample_code
 ```{r}
+# Create 'numbers'
 
-# Create `numbers`
+
+# Display 'numbers'
+
 
 ```
 
 *** =solution
 ```{r}
-# Create `numbers`
+# Create 'numbers'
 numbers <- c(1,2,3,4,5)
+
+# Display 'numbers'
+numbers
 
 
 ```
@@ -38,6 +44,50 @@ numbers <- c(1,2,3,4,5)
 ```{r}
 test_object("numbers", undefined_msg = "Make sure to define the vector as `numbers`.",
             incorrect_msg = "Make sure that you assign the elements to the `numbers` vector.") 
+test_output_contains("numbers", incorrect_msg = "Make sure to display the `numbers` vector.")
 
+```
+
+## Creating a character vector
+
+
+*** =instructions
+
+- Create a vector called *animals* with the following elements: dog, cat, tiger, lion, panda, wolf.
+
+*** =hint
+
+String elements (like words) should be listed in quotes as arguments for c().
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+# Create 'animals'
+
+
+# Display 'animals'
+
+
+```
+
+*** =solution
+```{r}
+# Create 'animals'
+animals <- c("dog","cat","tiger","lion","panda", "wolf")
+
+# Display 'animals'
+animals
+
+```
+
+*** =sct
+```{r}
+test_object("animals", undefined_msg = "Make sure to define the vector as `animals`.",
+            incorrect_msg = "Make sure that you assign the elements to the `animals` vector.") 
+test_output_contains("animals", incorrect_msg = "Make sure to display the `animals` vector.")
 
 ```
