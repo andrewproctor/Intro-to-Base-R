@@ -184,7 +184,6 @@ a <- "false"
 ```yaml
 type: NormalExercise
 xp: 50
-key: 0eb0a5ff05
 ```
 
 `@instructions`
@@ -215,7 +214,6 @@ success_msg("Good job!")
 ```yaml
 type: NormalExercise
 xp: 50
-key: 37b9eef468
 ```
 
 `@instructions`
@@ -234,6 +232,7 @@ key: 37b9eef468
 ```{r}
 # Determine the data type of object a
 str(a)
+class(a)
 
 ```
 
