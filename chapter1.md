@@ -172,27 +172,26 @@ a <- "false"
 
 `@sample_code`
 ```{r}
-# Display object a:
+# Display object a
 
 
 ```
 
 ***
 
-### Display object a:
+### Display variable a:
 
 ```yaml
 type: NormalExercise
 xp: 50
-key: 4e92fb0aa2
 ```
 
 `@instructions`
-- Display object a:
+- Display object a.
 
 `@solution`
 ```{r}
-# Display objects a:
+# Display variable a
 a
 
 ```
@@ -215,12 +214,11 @@ success_msg("Good job!")
 ```yaml
 type: NormalExercise
 xp: 50
-key: c620c7bd31
 ```
 
 `@instructions`
 
-- Check if object a is logical.
+- Check if *a* is logical.
 
 `@sample_code`
 ```{r}
@@ -239,12 +237,12 @@ str(a)
 
 `@hint`
 
-- To check the type of an object, you can use str().
+- To check the type of an object, you can use class() or str().
 
 `@sct`
 ```{r}
 ```{r}
-test_function("round", "x", 
+test_function("str", "x", 
     not_called_msg = "Make sure to call the function str()</code> to inspect the class of a.",
               incorrect_msg = "Have you passed the correct variable to the function str()?"))
               
