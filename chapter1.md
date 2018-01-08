@@ -184,7 +184,6 @@ a <- "false"
 ```yaml
 type: NormalExercise
 xp: 50
-key: 9831d88aa6
 ```
 
 `@instructions`
@@ -215,7 +214,6 @@ success_msg("Good job!")
 ```yaml
 type: NormalExercise
 xp: 50
-key: 821f040ab5
 ```
 
 `@instructions`
@@ -244,9 +242,8 @@ str(a)
 `@sct`
 ```{r}
 ```{r}
-test_or(test_function("str", "x"),
-        test_function("class", "x"),
-        test_output_contains('6'),
+test_or(test_function("str", 'a'),
+        test_function("class", 'a'),
   not_called_msg = "Make sure to call either the function <code>class()</code> or <code>str()</code> to inspect the class of <code>a</code>.", incorrect_msg = "Have you passed the correct variable to the function <code>class()</code> or <code>str()</code>?"))
               
 success_msg("Nice job!")
