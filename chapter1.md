@@ -242,9 +242,10 @@ str(a)
 `@sct`
 ```{r}
 ```{r}
-test_function("str", "x", 
-    not_called_msg = "Make sure to call the function str()</code> to inspect the class of a.",
-              incorrect_msg = "Have you passed the correct variable to the function str()?"))
+test_or(test_function("str", "x"),
+        test_function("class", "x"),
+        test_output_contains('6'),
+  not_called_msg = "Make sure to call either the function <code>class()</code> or <code>str()</code> to inspect the class of <code>a</code>.", incorrect_msg = "Have you passed the correct variable to the function <code>class()</code> or <code>str()</code>?"))
               
 success_msg("Nice job!")
 ```
