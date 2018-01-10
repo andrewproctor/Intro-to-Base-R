@@ -105,7 +105,7 @@ test_output_contains("animals", incorrect_msg = "Make sure to display the `anima
 
 
 
-- Create a matrix of randomly sampled values from a normal distribution.  There should be 3 rows and 3 columns.  Call it norm_matrix.
+- Create a matrix of randomly sampled values from a normal distribution.  There should be 3 rows and 3 columns.  Call it  <code>norm_matrix(n)<\code.
 - You can generate a random sample of *n* values from the standard normal distribution is: <code>rnorm(n)<\code>.
 
 *** =hint
