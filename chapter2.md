@@ -48,7 +48,7 @@ test_output_contains("numbers", incorrect_msg = "Make sure to display the `numbe
 
 ```
 
----
+--- type:NormalExercise lang:r xp:100 skills:1 key:591aa8489a
 
 ## Creating a character vector
 
@@ -91,5 +91,41 @@ animals
 test_object("animals", undefined_msg = "Make sure to define the vector as `animals`.",
             incorrect_msg = "Make sure that you assign the elements to the `animals` vector.") 
 test_output_contains("animals", incorrect_msg = "Make sure to display the `animals` vector.")
+
+```
+
+
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:21a0b0683c
+## Matrices in R
+
+
+*** =instructions
+
+
+
+- Create a matrix of randomly sampled values from a normal distribution.  There should be 3 rows and 3 columns.
+- You can generate a random sample of *n* values from the normal distribution is: <code>rnorm(n)<\code>.
+
+*** =hint
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+
+```
+
+*** =solution
+```{r}
+
+```
+
+*** =sct
+```{r}
 
 ```
