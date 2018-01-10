@@ -105,8 +105,8 @@ test_output_contains("animals", incorrect_msg = "Make sure to display the `anima
 
 
 
-- Create a matrix of randomly sampled values from a normal distribution.  There should be 3 rows and 3 columns.
-- You can generate a random sample of *n* values from the normal distribution is: <code>rnorm(n)<\code>.
+- Create a matrix of randomly sampled values from a normal distribution.  There should be 3 rows and 3 columns.  Call it norm_matrix.
+- You can generate a random sample of *n* values from the standard normal distribution is: <code>rnorm(n)<\code>.
 
 *** =hint
 
@@ -117,15 +117,20 @@ test_output_contains("animals", incorrect_msg = "Make sure to display the `anima
 
 *** =sample_code
 ```{r}
+# Generate a 3x3 matrix of standard normal values
+
 
 ```
 
 *** =solution
 ```{r}
+# Generate a 3x3 matrix of standard normal values
+norm_matrix <- matrix(rnorm(9),nrow=3,ncol=3, byrow=TRUE)
 
 ```
 
 *** =sct
 ```{r}
-
+test_object("norm_matrix", undefined_msg = "Make sure to define the vector as `norm_matrix`.",
+            incorrect_msg = "Make sure that you assign the elements to the `norm_matrix` vector.") 
 ```
