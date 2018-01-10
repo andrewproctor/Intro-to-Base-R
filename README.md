@@ -1,21 +1,20 @@
-# DataCamp Template Course
+# Intro to Base R Course
 <a href=https://www.datacamp.com//teach/repositories/115256665/go target="_blank"><img src="https://s3.amazonaws.com/assets.datacamp.com/img/github/content-engineering-repos/course_button.png" width="150"></a>
 <a href=https://www.datacamp.com//teach/repositories target="_blank"><img src="https://s3.amazonaws.com/assets.datacamp.com/img/github/content-engineering-repos/dashboard_button.png" width="150"></a>
 
-This an automatically generated <a href=https://www.datacamp.com target="_blank">DataCamp</a> course. You can start from these template files to create your own course.
+This an introduction to programming in the base R environment.  The interactive portion of the course is being conducted through <a href=https://www.datacamp.com target="_blank">DataCamp</a> course.
 
-Changes you make to this GitHub repository are automatically reflected in the linked DataCamp course. This means that you can enjoy all the advantages of version control, collaboration, issue handling ... of GitHub.
+## Course Contents
 
-## Workflow
-
-1. Edit the markdown and yml files in this repository. You can
+1. Basic Data Objects and Operations
    * Use DataCamp's <a href="https://www.datacamp.com/teach/documentation#tab_teach_editor">Teach Editor</a>
    * Use GitHub's online editor
    * Use <a href=https://git-scm.com/ target="_blank">git</a> locally and push your changes
-2. Check out your build attempts on the <a href=https://www.datacamp.com//teach/repositories target="_blank">Dashboard</a>.
-3. Check out your automatically updated <a href=https://www.datacamp.com/teach/repositories/115256665/go target="_blank">course on DataCamp</a>
+2. Vectors and matrices
+3. Dataframes
 
-## Getting Started
+
+## Course Structure and Getting Started
 
 A DataCamp course consists of two types of files:
 
