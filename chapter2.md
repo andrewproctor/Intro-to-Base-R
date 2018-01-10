@@ -133,6 +133,8 @@ norm_matrix <- matrix(rnorm(9),nrow=3,ncol=3, byrow=TRUE)
 
 *** =sct
 ```{r}
-test_object("norm_matrix", undefined_msg = "Make sure to define the vector as `norm_matrix`.",
-            incorrect_msg = "Make sure that you assign the elements to the `norm_matrix` vector.") 
+test_object("norm_matrix", undefined_msg = "Make sure to define the matrix as `norm_matrix`.",
+            incorrect_msg = "Make sure that you have correctly specified `norm_matrix`.") 
 ```
+
+
