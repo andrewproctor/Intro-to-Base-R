@@ -182,8 +182,6 @@ test_or(test_student_typed("?rnorm"),
         test_student_typed("help("rnorm")"),
         test_student_typed("?'rnorm'"),
         test_student_typed("?"rnorm""),
-        
      incorrect_msg = "Have you passed the correct variable to the function?")
-test_output_contains("rnorm", incorrect_msg = "Make sure to display the `rnorm` help file.")
 success_msg("Nice job!")
 ```
