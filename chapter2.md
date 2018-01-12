@@ -182,6 +182,6 @@ test_or(test_student_typed("?rnorm"),
         test_student_typed("help("rnorm")"),
         test_student_typed("?'rnorm'"),
         test_student_typed("?"rnorm""),
-     incorrect_msg = "Have you passed the correct variable to the function?")
+        incorrect_msg = "Have you passed the correct variable to the function?")
 success_msg("Nice job!")
 ```
