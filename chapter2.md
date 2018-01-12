@@ -1,6 +1,6 @@
 ---
-title       : Vectors, Matrices, and Data Frames
-description : Insert the chapter description here
+title       : Vectors and Matrices
+description : Exercises focused on one-dimension data objects (vectors) and homogenous, two-dimensional objects (matrices).
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:acd9c7ffdd
 ## Creating a vector
@@ -138,3 +138,52 @@ test_object("norm_matrix", undefined_msg = "Make sure to define the matrix as `n
 ```
 
 
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:7308804907
+## Help File
+
+
+*** =instructions
+
+- Use the help file to check out for rnorm.
+
+*** =hint
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+# Check the help file for rnorm
+
+```
+
+*** =solution
+```{r}
+# Check the help file for rnorm
+?rnorm
+help(rnorm)
+help('rnorm')
+help("rnorm")
+?'rnorm'
+?"rnorm"
+
+
+```
+
+*** =sct
+```{r}
+test_or(test_student_typed("?rnorm"),
+        test_student_typed("help(rnorm)"),
+        test_student_typed("help('rnorm')"),
+        test_student_typed("help("rnorm")"),
+        test_student_typed("?'rnorm'"),
+        test_student_typed("?"rnorm""),
+        
+     incorrect_msg = "Have you passed the correct variable to the function?")
+test_output_contains("rnorm", incorrect_msg = "Make sure to display the `rnorm` help file.")
+success_msg("Nice job!")
+```
