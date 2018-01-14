@@ -140,38 +140,3 @@ test_object("norm_matrix", undefined_msg = "Make sure to define the matrix as `n
 
 
 
---- type:NormalExercise lang:r xp:100 skills:1 key:7308804907
-## Help File
-
-
-*** =instructions
-
-- Use the help file to check out for rnorm.
-
-*** =hint
-
-*** =pre_exercise_code
-```{r}
-
-```
-
-*** =sample_code
-```{r}
-# Check the help file for rnorm
-
-```
-
-*** =solution
-```{r}
-# Check the help file for rnorm
-my_vect <- 2 + 2
-
-
-```
-
-*** =sct
-```{r}
-test_object("my_vect", incorrect_msg = "Something is wrong with `my_vect`. Make sure you've assigned the correct value to the variable.")
-success_msg("Great!")
- 
-  ```
