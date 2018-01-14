@@ -128,7 +128,7 @@ help(matrix)
 *** =sct
 ```{r}
 test_or(test_function("help",args="matrix"),
-        check_code("'?matrix'"))
+        check_code("?matrix"))
 success_msg("Great!")
 
 ```
