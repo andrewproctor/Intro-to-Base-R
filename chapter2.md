@@ -95,11 +95,6 @@ test_output_contains("animals", incorrect_msg = "Make sure to display the `anima
 success_msg("Great!")
 
 ```
-
-
-
-
-
 --- type:NormalExercise lang:r xp:100 skills:1 key:bcb2a2b508
 ## Getting help
 
@@ -127,12 +122,13 @@ success_msg("Great!")
 ```{r}
 # View the help file for the `matrix` function
 help(matrix)
+?matrix
 ```
 
 *** =sct
 ```{r}
-
-test_function("matrix", incorrect_msg = "Did you access the help file for matrix?")
+test_or(test_function("help",args="matrix"),
+        check_code("'?matrix'"))
 success_msg("Great!")
 
 ```
