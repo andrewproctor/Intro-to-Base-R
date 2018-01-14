@@ -98,10 +98,13 @@ success_msg("Great!")
 --- type:NormalExercise lang:r xp:100 skills:1 key:bcb2a2b508
 ## Getting help
 
+In the next exercise, you will be creating a matrix.  
+
+To prepare, look over the helpfile for the <code>matrix</code> function.
 
 *** =instructions
 
-- Access the R help file for the matrix function.
+- Access the R help file for the <code>matrix</code> function.
 
 *** =hint
 
@@ -122,11 +125,16 @@ success_msg("Great!")
 ```{r}
 # View the help file for the `matrix` function
 help(matrix)
+?matrix
 ```
 
 *** =sct
 ```{r}
-test_function("help", args="topic")
+test_or(test_function("help", args="topic", 
+         not_called_msg = "Try using the <code>help()</code> function!",
+              args_not_specified = "Remember to supply <code>matrix</code> as the topic for the help function.",
+              incorrect_msg = "Remember to supply <code>matrix</code> as the topic for the <code>help()</code> function."),
+        test_student_typed("?matrix"))
 success_msg("Great!")
 ```
 
