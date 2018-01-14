@@ -122,14 +122,11 @@ success_msg("Great!")
 ```{r}
 # View the help file for the `matrix` function
 help(matrix)
-?matrix
-?"matrix"
 ```
 
 *** =sct
 ```{r}
-
-test_function("help","matrix")
+test_function("help",args="matrix")
 success_msg("Great!")
 ```
 
