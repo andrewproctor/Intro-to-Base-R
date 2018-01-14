@@ -164,24 +164,14 @@ test_object("norm_matrix", undefined_msg = "Make sure to define the matrix as `n
 *** =solution
 ```{r}
 # Check the help file for rnorm
-?rnorm
-help(rnorm)
-help('rnorm')
-help("rnorm")
-?'rnorm'
-?"rnorm"
+my_vect <- 2 + 2
 
 
 ```
 
 *** =sct
 ```{r}
-test_or(test_student_typed("?rnorm"),
-        test_student_typed("help(rnorm)"),
-        test_student_typed("help('rnorm')"),
-        test_student_typed("help("rnorm")"),
-        test_student_typed("?'rnorm'"),
-        test_student_typed("?"rnorm""),
-        incorrect_msg = "Have you passed the correct variable to the function?")
-success_msg("Nice job!")
-```
+test_object("my_vect", incorrect_msg = "Something is wrong with `my_vect`. Make sure you've assigned the correct value to the variable.")
+success_msg("Great!")
+ 
+  ```
