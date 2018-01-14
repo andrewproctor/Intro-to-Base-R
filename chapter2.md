@@ -126,7 +126,7 @@ help(matrix)
 
 *** =sct
 ```{r}
-test_function("help",args="matrix")
+test_function("help")
 success_msg("Great!")
 ```
 
