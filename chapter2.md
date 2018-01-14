@@ -128,9 +128,8 @@ help(matrix)
 
 *** =sct
 ```{r}
-test_or(test_function("help", args="matrix", not_called_msg = "Try using the <code>help()</code> function!",
-              args_not_specified_msg = "Remember to enter the argument <code>matrix</code> in the help function!")
-        test_student_typed("?matrix")
+
+test_function("help","matrix")
 success_msg("Great!")
 ```
 
