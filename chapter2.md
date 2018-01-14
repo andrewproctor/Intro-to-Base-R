@@ -123,18 +123,16 @@ success_msg("Great!")
 # View the help file for the `matrix` function
 help(matrix)
 ?matrix
-?'matrix'
+?"matrix"
 ```
 
 *** =sct
 ```{r}
-test_or(test_function("help","matrix"),
+test_or(test_function("help","matrix"), not_called_msg = "Try using the <code>help()</code> function!",
+              args_not_specified_msg = "Remember to enter the argument <code>matrix</code> in the help function!",
         test_student_typed("?matrix")
-        check_code("^?\'matrix?\'$"))
 success_msg("Great!")
-
 ```
-
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:21a0b0683c
 ## Matrices in R
