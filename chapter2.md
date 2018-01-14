@@ -123,12 +123,14 @@ success_msg("Great!")
 # View the help file for the `matrix` function
 help(matrix)
 ?matrix
+?'matrix'
 ```
 
 *** =sct
 ```{r}
-test_or(test_function("help",args="matrix"),
-        check_code("?matrix"))
+test_or(test_function("help","matrix"),
+        test_student_typed("?matrix")
+        check_code("^?\'matrix?\'$"))
 success_msg("Great!")
 
 ```
