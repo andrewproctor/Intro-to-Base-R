@@ -17,6 +17,7 @@ key: bc36446b49
 `@instructions`
 - Without defining a new variable, calculate the log of (5 squared - 8).
 
+
 `@hint`
 You can take the log by using log() function.
 

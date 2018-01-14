@@ -99,6 +99,44 @@ success_msg("Great!")
 
 
 
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:bcb2a2b508
+## Getting help
+
+
+*** =instructions
+
+- Access the R help file for the matrix function.
+
+*** =hint
+
+- You can access the help file two different ways, through ?*FUNCtION* or help(*FUNCTION*).
+
+*** =pre_exercise_code
+```{r}
+# No PEC
+```
+
+*** =sample_code
+```{r}
+# View the help file for the `matrix` function
+
+```
+
+*** =solution
+```{r}
+# View the help file for the `matrix` function
+help(matrix)
+```
+
+*** =sct
+```{r}
+
+test_function("matrix", incorrect_msg = "Did you access the help file for matrix?")
+success_msg("Great!")
+
+
+```
 --- type:NormalExercise lang:r xp:100 skills:1 key:21a0b0683c
 ## Matrices in R
 
