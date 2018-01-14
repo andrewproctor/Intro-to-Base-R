@@ -110,7 +110,7 @@ success_msg("Great!")
 
 *** =hint
 
-- You can access the help file two different ways, through ?*FUNCtION* or help(*FUNCTION*).
+- You can access the help file two different ways, through ?FUNCTION or help(FUNCTION).
 
 *** =pre_exercise_code
 ```{r}
@@ -135,21 +135,18 @@ help(matrix)
 test_function("matrix", incorrect_msg = "Did you access the help file for matrix?")
 success_msg("Great!")
 
-
 ```
+
+
 --- type:NormalExercise lang:r xp:100 skills:1 key:21a0b0683c
 ## Matrices in R
 
 
 *** =instructions
-
-
-
 - Create a matrix of randomly sampled values from a normal distribution.  There should be 3 rows and 3 columns.  Call it  <code>norm_matrix</code>.
 - You can generate a random sample of *n* values from the standard normal distribution is: <code>rnorm(n)</code>.
 
 *** =hint
-
 To create a matrix, use the <code>matrix()<\code> function. Remember to specify nrow, ncol, and "byrow=TRUE".
 
 *** =pre_exercise_code
