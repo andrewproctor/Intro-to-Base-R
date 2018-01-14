@@ -45,6 +45,7 @@ numbers
 test_object("numbers", undefined_msg = "Make sure to define the vector as `numbers`.",
             incorrect_msg = "Make sure that you assign the elements to the `numbers` vector.") 
 test_output_contains("numbers", incorrect_msg = "Make sure to display the `numbers` vector.")
+success_msg("Great!")
 
 ```
 
@@ -91,6 +92,7 @@ animals
 test_object("animals", undefined_msg = "Make sure to define the vector as `animals`.",
             incorrect_msg = "Make sure that you assign the elements to the `animals` vector.") 
 test_output_contains("animals", incorrect_msg = "Make sure to display the `animals` vector.")
+success_msg("Great!")
 
 ```
 
@@ -135,6 +137,8 @@ norm_matrix <- matrix(rnorm(9),nrow=3,ncol=3, byrow=TRUE)
 ```{r}
 test_object("norm_matrix", undefined_msg = "Make sure to define the matrix as `norm_matrix`.",
             incorrect_msg = "Make sure that you have correctly specified `norm_matrix`.") 
+success_msg("Great!")
+
 ```
 
 
