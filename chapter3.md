@@ -1,54 +1,6 @@
 ---
 title       : Data Frames
 description : Practice with Data Frames, heterogeneous two-dimension data objects.
----
-## Have a look at the structure
-
-```yaml
-type: NormalExercise
-xp: 100
-skills: 1
-key: d04dc3acec
-```
-
-Another method that is often used to get a rapid overview of your data is the function [`str()`](http://www.rdocumentation.org/packages/utils/functions/str). The function [`str()`](http://www.rdocumentation.org/packages/utils/functions/str) shows you the structure of your data set. For a data frame it tells you:
-
-- The total number of observations (e.g. 32 car types)
-- The total number of variables (e.g. 11 car features)
-- A full list of the variables names (e.g. `mpg`, `cyl` ... )
-- The data type of each variable (e.g. `num`)
-- The first observations
-
-Applying the [`str()`](http://www.rdocumentation.org/packages/utils/functions/str) function will often be the first thing that you do when receiving a new data set or data frame. It is a great way to get more insight in your data set before diving into the real analysis.
-
-`@instructions`
-Investigate the structure of [`mtcars`](http://www.rdocumentation.org/packages/datasets/functions/mtcars). Make sure that you see the same numbers, variables and data types as mentioned above.
-
-`@hint`
-Use the [`str()`](http://www.rdocumentation.org/packages/utils/functions/str) function on [`mtcars`](http://www.rdocumentation.org/packages/datasets/functions/mtcars).
-
-`@pre_exercise_code`
-```{r}
-# no pec
-```
-
-`@sample_code`
-```{r}
-# Investigate the structure of mtcars
-```
-
-`@solution`
-```{r}
-# Investigate the structure of mtcars
-str(mtcars)
-```
-
-`@sct`
-```{r}
-test_output_contains("str(mtcars)", incorrect_msg = "Have you correctly called `str()` on `mtcars`?")
-success_msg("Nice work! Can you find all the information that is listed in the exercise's assignment? Continue to the next exercise.")
-```
-
 
 ---
 ## Creating a data frame 
@@ -156,7 +108,7 @@ key: c13ea421dd078030a225f49e53a8927ce8fefbe0
 
 Based off of vehicle fuel economy data from the Environment Protection Agency, the following vectors have already been crated for you:  `make`, `model`,`year`, `cylinder`, `drive`, and `mpg`.
 
-Using these vectors, try once again making and a data frame and then add columns to it.
+Using these vectors, once again make a data frame and then add columns to it.
 
 
 `@instructions`
@@ -172,11 +124,11 @@ Using these vectors, try once again making and a data frame and then add columns
 `@pre_exercise_code`
 ```{r}
 make <- c("Saturn","Nissan","BMW","Audi","Honda","Kia","Mazda","Lamborghini","Subaru","Volkswagen")
-model <- c("Ion","Titan","Z4","S6","Civic","","","","Optima Hybrid","RX8","Gallardo","Outback","Jetta")
+model <- c("Ion","Titan","Z4","S6","Civic","Optima Hybrid","RX8","Gallardo","Outback","Jetta")
 year <- c(2006,2012,2005,2009,2010,2012,2006,2010,2007,2007)
 cyl <- c(4,8,6,10,4,4,2,10,4,5)
 drive <- c("Front-Wheel Drive","All-Wheel Drive","Rear-Wheel Drive","All-Wheel Drive","Front-Wheel Drive","Front-Wheel Drive","Rear-Wheel Drive","All-Wheel Drive","All-Wheel Drive","Front-Wheel Drive")
-mpg <- c(31,17,26,19,36,39,22,24,28)
+mpg <- c(31,17,26,19,36,39,22,20,26,28)
 ```
 
 `@sample_code`
@@ -204,6 +156,55 @@ fuelecon2 <-cbind(fuelecon1,cyl,drive)
 ```{r}
 test_object("fuelecon1", undefined_msg = "Blah", incorrect_msg = "Blah")
 test_object("fuelecon2", undefined_msg = "Blah", incorrect_msg = "Blah")
+success_msg("Awesome!")
+```
+
+---
+## Check out the structure of a data frame
+
+```yaml
+type: NormalExercise
+xp: 50
+skills: 1
+key: 5dd038451f
+```
+
+Similar to inspecting the class of vector, you will often want to look at how data is formatted within data frames.  
+
+
+`@instructions`
+Use the <code>str()</code> command to check out the structure of `fuelecon2`.
+
+`@hint`
+- The only argument of `str()` is the data object you would like to inspect!  
+
+`@pre_exercise_code`
+```{r}
+make <- c("Saturn","Nissan","BMW","Audi","Honda","Kia","Mazda","Lamborghini","Subaru","Volkswagen")
+model <- c("Ion","Titan","Z4","S6","Civic","Optima Hybrid","RX8","Gallardo","Outback","Jetta")
+year <- c(2006,2012,2005,2009,2010,2012,2006,2010,2007,2007)
+cyl <- c(4,8,6,10,4,4,2,10,4,5)
+drive <- c("Front-Wheel Drive","All-Wheel Drive","Rear-Wheel Drive","All-Wheel Drive","Front-Wheel Drive","Front-Wheel Drive","Rear-Wheel Drive","All-Wheel Drive","All-Wheel Drive","Front-Wheel Drive")
+mpg <- c(31,17,26,19,36,39,22,20,26,28)
+fuelecon2 <-data.frame(make,model,year,mpg,cyl,drive)
+```
+
+`@sample_code`
+```{r}
+# Check out the structure of 'fuelecon2'
+
+```
+
+`@solution`
+```{r}
+# Check out the structure of 'fuelecon2'
+str(fuelecon2)
+
+```
+
+`@sct`
+```{r}
+test_output_contains("str(fuelecon2)", incorrect_msg = "Have you correctly displayed the structure of `fuelecon2`? Use `str()` to do this!")
 success_msg("Awesome!")
 ```
 
