@@ -73,7 +73,7 @@ xp: 50
 ***
 ```yaml
 type: NormalExercise
-xp: 50
+xp: 150
 skills: 1
 key: df0b89706d90526b3c0bbe15e400b74cbd900704
 ```
@@ -89,8 +89,12 @@ Create vectors with the names and values as follows:
 3. **education**: hs, hs, middle, hs, masters
 4. **married**:  never, divorced, never, married, married
 
+Then combine the vectors into a data frame called **PSID**.
+
 `@hint`
-Insert elements values in the `c()` function, in the same tense as they appear.  Each string element should be wrapped in quotation marks. 
+- Insert elements values in the `c()` function, in the same tense as they appear.  Each string element should be wrapped in quotation marks. 
+
+- Use the function <code>data.frame()<\code> to combine the vectors into a data frame.
 
 `@pre_exercise_code`
 ```{r}
@@ -107,15 +111,27 @@ Insert elements values in the `c()` function, in the same tense as they appear. 
 
 # Create 'married' vector
 
+# Create the 'PSID' data frame
+
 ```
 
 `@solution`
 ```{r}
-# Definition of vectors
+# Create 'earnings' vector
 earnings <- c(0,11000,0,1600,37730)
+
+# Create 'age' vector'
 age <- c(36,31,34,35,45)
+
+# Create 'education' vector
 education <-c("hs","hs","middle","hs","masters")
+
+# Create 'married' vector
 married <- c("never","divorced","never","married","married")
+
+# Create the 'PSID' data frame
+PSID <-data.frame(earnings,age,education,married)
+
 ```
 
 `@sct`
@@ -124,55 +140,12 @@ test_object("earnings", undefined_msg = "The earnings vector is not defined", in
 test_object("age", undefined_msg = "The age vector is not defined", incorrect_msg = "Be sure to write the age vector exactly as it appears (ie check case and spelling).")
 test_object("education", undefined_msg = "The education vector is not defined", incorrect_msg = "Be sure to write the education vector exactly as it appears (ie check case and spelling).")
 test_object("married", undefined_msg = "The married vector is not defined", incorrect_msg = "Be sure to write the married vector exactly as it appears (ie check case and spelling).")
-
-success_msg("Great job! Continue to creating the data frame.");
-```
-
-***
-```yaml
-type: NormalExercise
-xp: 50
-skills: 1
-key: 94d447f51a
-```
-Now let's turn the vectors into a data frame.
-
-`@instructions`
-Combine the vectors **earnings**,**age**,**education**, and *married** into a data frame called **PSID**.
-
-`@hint`
-Use the function <code>data.frame()<\code> to combine the vectors into a data frame.
-
-`@pre_exercise_code`
-```{r}
-earnings <- c(0,11000,0,1600,37730)
-age <- c(36,31,34,35,45)
-education <-c("hs","hs","middle","hs","masters")
-married <- c("never","divorced","never","married","married")
-```
-
-`@sample_code`
-```{r}
-# Create the 'PSID' data frame
-
-
-```
-
-`@solution`
-```{r}
-# Create the 'PSID' data frame
-PSID <-data.frame(earnings,age,education,married)
-
-```
-
-`@sct`
-```{r}
 test_object("PSID", undefined_msg = "You haven't create the PSID object as a data frame.", incorrect_msg = "Be sure you are using combining the vectors in the same order that they were originally written.")
-success_msg("Great job! Continue to creating the data frame.");
-```
 
+success_msg("Great job!");
+```
 ---
-## Creating a data frame (2)
+## Creating and expanding a data frame
 
 ```yaml
 type: NormalExercise
@@ -181,36 +154,57 @@ skills: 1
 key: c13ea421dd078030a225f49e53a8927ce8fefbe0
 ```
 
-The `planets_df` data frame should have 8 observations and 5 variables. It has been made available in the workspace, so you can directly use it.
+Based off of vehicle fuel economy data from the Environment Protection Agency, the following vectors have already been crated for you:  `make`, `model`,`year`, `cylinder`, `drive`, and `mpg`.
+
+Using these vectors, try once again making and a data frame and then add columns to it.
+
 
 `@instructions`
-Use [`str()`](http://www.rdocumentation.org/packages/utils/functions/str) to investigate the structure of the new `planets_df` variable.
+- Create a dataframe called **fuelecon1** from the following vectors:  `make`, `model`, `year`, and `mpg`.
+
+- Then add the `cyl` and `drive` vectors as additional columns to the data frame, naming the new data frame `fuelecon2`.
 
 `@hint`
-`planets_df` is already available in your workspace, so `str(planets_df)` will do the trick.
+- Use the function <code>data.frame()<\code> to combine the vectors into a data frame.
+
+- Add columns to the data frame using the <code>cbind()<\code> function.
 
 `@pre_exercise_code`
 ```{r}
-load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/planets.RData"))
+make <- c("Saturn","Nissan","BMW","Audi","Honda","Kia","Mazda","Lamborghini","Subaru","Volkswagen")
+model <- c("Ion","Titan","Z4","S6","Civic","","","","Optima Hybrid","RX8","Gallardo","Outback","Jetta")
+year <- c(2006,2012,2005,2009,2010,2012,2006,2010,2007,2007)
+cyl <- c(4,8,6,10,4,4,2,10,4,5)
+drive <- c("Front-Wheel Drive","All-Wheel Drive","Rear-Wheel Drive","All-Wheel Drive","Front-Wheel Drive","Front-Wheel Drive","Rear-Wheel Drive","All-Wheel Drive","All-Wheel Drive","Front-Wheel Drive")
+mpg <- c(31,17,26,19,36,39,22,24,28)
 ```
 
 `@sample_code`
 ```{r}
-# Check the structure of planets_df
+# Create the 'fuelecon1' data frame
+
+
+# Creat the 'fuelecon2' data frame by adding the vectors 'cyl' and 'drive' to 'fuelecon1'
+
+
 ```
 
 `@solution`
 ```{r}
-# Check the structure of planets_df
-str(planets_df)
+# Create the 'fuelecon1' data frame
+fuelecon1 <-data.frame(make,model,year,mpg)
+
+# Creat the 'fuelecon2' data frame by adding the vectors 'cyl' and 'drive' to 'fuelecon1'
+fuelecon2 <-cbind(fuelecon1,cyl,drive)
+
+
 ```
 
 `@sct`
 ```{r}
-msg = "Do not remove or overwrite the `planets_df` data frame that is already available in the workspace!"
-test_object("planets_df", undefined_msg = msg, incorrect_msg = msg)
-test_output_contains("str(planets_df)", incorrect_msg = "Have you correctly displayed the structure of `planets_df`? Use `str()` to do this!")
-success_msg("Awesome! Now that you have a clear understanding of the `planets_df` data set, it's time to see how you can select elements from it. Learn all about in the next exercises!")
+test_object("fuelecon1", undefined_msg = "Blah", incorrect_msg = "Blah")
+test_object("fuelecon2", undefined_msg = "Blah", incorrect_msg = "Blah")
+success_msg("Awesome!")
 ```
 
 
