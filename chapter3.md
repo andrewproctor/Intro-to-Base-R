@@ -112,7 +112,7 @@ Insert elements values in the `c()` function, in the same tense as they appear. 
 `@solution`
 ```{r}
 # Definition of vectors
-earnings <- c(0,11000,0,1600,37730.)
+earnings <- c(0,11000,0,1600,37730)
 age <- c(36,31,34,35,45)
 education <-c("hs","hs","middle","hs","masters")
 married <- c("never","divorced","never","married","married")
@@ -133,7 +133,7 @@ success_msg("Great job! Continue to creating the data frame.");
 type: NormalExercise
 xp: 50
 skills: 1
-key: 78589f86ed
+key: df0b89706d90526b3c0bbe15e400b74cbd900704
 ```
 Now let's turn the vectors into a data frame.
 
@@ -145,7 +145,7 @@ Use the function <code>data.frame()<\code> to combine the vectors into a data fr
 
 `@pre_exercise_code`
 ```{r}
-earnings <- c(0,11000,0,1600,37730.)
+earnings <- c(0,11000,0,1600,37730)
 age <- c(36,31,34,35,45)
 education <-c("hs","hs","middle","hs","masters")
 married <- c("never","divorced","never","married","married")
