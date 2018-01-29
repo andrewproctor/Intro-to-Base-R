@@ -1,6 +1,6 @@
 ---
-title       : Data Frames
-description : Practice with Data Frames, heterogeneous two-dimension data objects.
+title       : Data Frames, Factors, and Selections
+description : Practice with Data Frames, heterogeneous two-dimension data objects, including how to define factors and create selections of a data frame.
 
 ---
 ## Creating a data frame 
@@ -154,13 +154,13 @@ fuelecon2 <-cbind(fuelecon1,cyl,drive)
 
 `@sct`
 ```{r}
-test_object("fuelecon1", undefined_msg = "Blah", incorrect_msg = "Blah")
-test_object("fuelecon2", undefined_msg = "Blah", incorrect_msg = "Blah")
+test_object("fuelecon1", undefined_msg = "Be sure to create `fuelecon1` as a dataframe.", incorrect_msg = "You have not correctly defined `fuelecon1`")
+test_object("fuelecon2", undefined_msg = "Be sure to create `fuelecon2`.", incorrect_msg = "You have not correctly defined `fuelecon2`")
 success_msg("Awesome!")
 ```
 
 ---
-## Check out the structure of a data frame
+## Viewing the structure of a data frame
 
 ```yaml
 type: NormalExercise
@@ -187,6 +187,8 @@ cyl <- c(4,8,6,10,4,4,2,10,4,5)
 drive <- c("Front-Wheel Drive","All-Wheel Drive","Rear-Wheel Drive","All-Wheel Drive","Front-Wheel Drive","Front-Wheel Drive","Rear-Wheel Drive","All-Wheel Drive","All-Wheel Drive","Front-Wheel Drive")
 mpg <- c(31,17,26,19,36,39,22,20,26,28)
 fuelecon2 <-data.frame(make,model,year,mpg,cyl,drive)
+fuelecon2$drive <- as.character(fuelecon2$drive)
+
 ```
 
 `@sample_code`
@@ -208,7 +210,129 @@ test_output_contains("str(fuelecon2)", incorrect_msg = "Have you correctly displ
 success_msg("Awesome!")
 ```
 
+---
+## Changing the structure of a data frame
 
+```yaml
+type: NormalExercise
+xp: 50
+skills: 1
+key: '6725886057'
+```
+
+Did you notice that the `drive` variable in `fuelecon2` has the character class?  Since the type of drive is a categorical variable, with possible values of "Rear-Wheel Drive", "Front-Wheel Drive", and "All-Wheel Drive", we should change the data type so that it is stored as a factor.
+
+Just for practice, let's also change the class of `make` and `model` to character.
+
+`@instructions`
+- Change  `make` and `model` variables to character.
+
+- Change `drive` so that is formatted as factor.
+
+`@hint`
+- Use the functions `as.factor()` and `as.character()` to change data classes.  
+
+`@pre_exercise_code`
+```{r}
+make <- c("Saturn","Nissan","BMW","Audi","Honda","Kia","Mazda","Lamborghini","Subaru","Volkswagen")
+model <- c("Ion","Titan","Z4","S6","Civic","Optima Hybrid","RX8","Gallardo","Outback","Jetta")
+year <- c(2006,2012,2005,2009,2010,2012,2006,2010,2007,2007)
+cyl <- c(4,8,6,10,4,4,2,10,4,5)
+drive <- c("Front-Wheel Drive","All-Wheel Drive","Rear-Wheel Drive","All-Wheel Drive","Front-Wheel Drive","Front-Wheel Drive","Rear-Wheel Drive","All-Wheel Drive","All-Wheel Drive","Front-Wheel Drive")
+mpg <- c(31,17,26,19,36,39,22,20,26,28)
+fuelecon2 <-data.frame(make,model,year,mpg,cyl,drive)
+fuelecon2$drive <- as.character(fuelecon2$drive)
+```
+
+`@sample_code`
+```{r}
+# Change the class of 'make' to character
+
+
+# Change the class of 'model' to character
+
+
+# Change the class of 'drive' to factor
+
+
+```
+
+`@solution`
+```{r}
+# Change the class of 'make' to character
+fuelecon2$make <- as.character(fuelecon2$make)
+
+
+# Change the class of 'model' to character
+fuelecon2$model <- as.character(fuelecon2$model)
+
+
+# Change the class of 'drive' to factor
+fuelecon2$drive <- as.factor(fuelecon2$drive)
+
+
+
+
+```
+
+`@sct`
+```{r}
+test_object("fuelecon2", undefined_msg = "Ahhh!  This isn't supposed to happen!  Have you deleted fuelecon2?", incorrect_msg = "You have not changed the class correctly.")
+success_msg("Awesome!")
+```
+
+---
+## Using Ordered Factors
+
+```yaml
+type: NormalExercise
+xp: 100
+skills: 1
+key: 88d3164325
+```
+
+Since factor variables represent categorical variables, it makes sense to distinguish between cases where there is no underlying quantitative relationship between values (ie *qualitative data*) and data where there is intrinsic ordering of values (*ordinal data*) 
+
+This is readily accomodated in R by the use of factor *ordering*.  Let's try an example with the PSID data you created earlier.
+
+`@instructions`
+- First, view the structure of the PSID data framea already saved in the environment.
+
+- Change `education` so that it is an ordered factor with the following ordering: `elementary`, `middle`, `HS`, `bachelors`, `masters`
+
+`@hint`
+- Try using the help file for `factor()` to see how ordering should be specified.
+
+`@pre_exercise_code`
+```{r}
+earnings <- c(0,11000,0,1600,37730)
+age <- c(36,31,34,35,45)
+education <-c("hs","hs","middle","hs","masters")
+married <- c("never","divorced","never","married","married")
+PSID <-data.frame(earnings,age,education,married)
+```
+
+`@sample_code`
+```{r}
+# Change education into an ordered factor
+
+
+```
+
+`@solution`
+```{r}
+# Change education into an ordered factor
+PSID$education <-factor(PSID$education, ordered=TRUE, 
+    levels = c("elementary", "middle", "HS", "bachelors", "masters"))
+
+
+```
+
+`@sct`
+```{r}
+test_object("PSID", undefined_msg = "Ahhh!  This isn't supposed to happen!  Have you deleted PSID?", incorrect_msg = "You haven't changed education into an ordered vector correctly.  Try looking at the help file for `factor()`!")
+success_msg("Awesome!")
+```
 ---
 ## Selection of data frame elements
 
