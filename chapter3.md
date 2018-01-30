@@ -282,7 +282,7 @@ success_msg("Awesome!")
 ```
 
 ---
-## Using Ordered Factors
+## Using ordered factors
 
 ```yaml
 type: NormalExercise
@@ -296,9 +296,11 @@ Since factor variables represent categorical variables, it makes sense to distin
 This is readily accomodated in R by the use of factor *ordering*.  Let's try an example with the PSID data you created earlier.
 
 `@instructions`
-- First, view the structure of the PSID data framea already saved in the environment.
+- First, view the structure of the PSID data frame already saved in the environment.
 
 - Change `education` so that it is an ordered factor with the following ordering: `elementary`, `middle`, `HS`, `bachelors`, `masters`
+
+- Look at the structure of PSID again to see how it's changed.
 
 `@hint`
 - Try using the help file for `factor()` to see how ordering should be specified.
@@ -314,16 +316,28 @@ PSID <-data.frame(earnings,age,education,married)
 
 `@sample_code`
 ```{r}
+# View the structure of the education column in PSID
+
+
 # Change education into an ordered factor
+
+
+# View the structure of the education column in PSID again
 
 
 ```
 
 `@solution`
 ```{r}
+# View the structure of the education column in PSID
+str(PSID$education)
+
 # Change education into an ordered factor
 PSID$education <-factor(PSID$education, ordered=TRUE, 
-    levels = c("elementary", "middle", "HS", "bachelors", "masters"))
+    levels = c("elementary", "middle", "hs", "bachelors", "masters"))
+
+# View the structure of the education column in PSID again
+str(PSID$education)
 
 
 ```
@@ -331,6 +345,8 @@ PSID$education <-factor(PSID$education, ordered=TRUE,
 `@sct`
 ```{r}
 test_object("PSID", undefined_msg = "Ahhh!  This isn't supposed to happen!  Have you deleted PSID?", incorrect_msg = "You haven't changed education into an ordered vector correctly.  Try looking at the help file for `factor()`!")
+test_output_contains("str(PSID$education)", incorrect_msg = "Have you correctly displayed the structure of the `education` column of `PSID`? Use `str()` to do this!")
+
 success_msg("Awesome!")
 ```
 ---
@@ -343,54 +359,61 @@ skills: 1
 key: 8c664726b8a173cda730cbb20a52ac1795d9a0e9
 ```
 
-Similar to vectors and matrices, you select elements from a data frame with the help of square brackets `[ ]`. By using a comma, you can indicate what to select from the rows and the columns respectively. For example:
-
-- `my_df[1,2]` selects the value at the first row and second column in `my_df`.
-- `my_df[1:3,2:4]` selects rows 1, 2, 3 and columns 2, 3, 4 in `my_df`.
-
-Sometimes you want to select all elements of a row or column. For example, `my_df[1, ]` selects all elements of the first row. Let us now apply this technique on `planets_df`!
+Now let's practice selecting elements from a data frame using bracket arguments (eg `mydf[,]`).  For this exercise, you'll be using a larger sample from the same PSID dataset, `PSID2`.
 
 `@instructions`
-- From `planets_df`, select the diameter of Mercury: this is the value at the first row and the third column. Simply print out the result.
-- From `planets_df`, select all data on Mars (the fourth row). Simply print out the result.
+Using the `PSID2` data frame:
+-Display the first row of observations. 
+- Select only observations where individual's `age` is less than 40 and marital status (`married`) is coded as "never". Define this subset as `PSID.u40.unmarried`.
 
 `@hint`
-To select the diameter for Venus (the second row), you would need: `planets_df[2,3]`. What do you need for Mercury then?
+
+- To display the first row of a dataframe `x`, simply enter `x[1,]`.
+- To assign the subset to a new data frame called `mysubset`, the code would be `mysubset <- x[1,]`.
+- Remember you can used the AND operator (`&`) to place multiple conditions on the rows.
 
 `@pre_exercise_code`
 ```{r}
-load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/planets.RData"))
+library(dplyr)
+library(Ecdat)
+set.seed(5)
+data(PSID)
+
+PSID2 <- PSID %>% sample_n(20) %>%
+      select(earnings, age, educatn, married) %>% 
+      rename(education=educatn) 
+PSID2$married <- recode(PSID2$married, "never"="never married")
 ```
 
 `@sample_code`
 ```{r}
-# The planets_df data frame from the previous exercise is pre-loaded
-
-# Print out diameter of Mercury (row 1, column 3)
+# Display the first row of the data
 
 
-# Print out data for Mars (entire fourth row)
+# Save the subset of observations with age < 40 & married
+# equal to 'never' as a data framed called PSID.u40.unmarried
+
+
 
 ```
 
 `@solution`
 ```{r}
-# The planets_df data frame from the previous exercise is pre-loaded
+# Display the first row of the data
+PSID2[1,]
 
-# Print out diameter of Mercury (row 1, column 3)
-planets_df[1,3]
+# Save the subset of observations with age less than 40 and marital status equal to 'never' as a data framed called PSID.u40.unmarried
+PSID.u40.unmarried <- PSID2[(age < 40) & (married=="never"),]
 
-# Print out data for Mars (entire fourth row)
-planets_df[4, ]
+
 ```
 
 `@sct`
 ```{r}
-msg = "Do not remove or overwrite the `planets_df` data frame!"
-test_object("planets_df", undefined_msg = msg, incorrect_msg = msg)
-test_output_contains("planets_df[1,3]", incorrect_msg = "Have you correctly selected and printed out the diameter for Mercury? You can use `[1,3]`.")
-test_output_contains("planets_df[4, ]", incorrect_msg = "Have you correctly selected and printed out all data for Mars? You can use `[4,]`.")
-success_msg("Great! Apart from selecting elements from your data frame by index, you can also use the column names. To learn how, head over to the next exercise.")
+test_object("PSID.u40.unmarried", undefined_msg = "Did you save the under 40, unmarried selection as a new data frame called PSID.u40.unmarried?", incorrect_msg = "Your subset conditions for PSID.u40.unmarried are not correct!")
+test_output_contains("PSID2[1,]", incorrect_msg = "Have you correctly selected and printed out the first row of the `PSID2` data frame?")
+
+success_msg("Good job!")
 ```
 
 
