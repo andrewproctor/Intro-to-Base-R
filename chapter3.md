@@ -374,16 +374,13 @@ Using the `PSID2` data frame:
 
 `@pre_exercise_code`
 ```{r}
-library(dplyr)
-library(Ecdat)
-set.seed(5)
-data(PSID)
-
-PSID2 <- PSID %>% sample_n(20) %>%
-      select(earnings, age, educatn, married) %>% 
-      rename(education=educatn) 
-PSID2$married <- recode(PSID2$married, "never"="never married")
-```
+earnings <-c(9700,1500,18300,0,0,0,0,1500,8921,13000,37000,7000,40000,21500,5200,34000,13000,21500,120,31000)
+age <- c(45,40,50,43,30,30,35,36,37,36,40,44,44,32,35,35,35,37,34,31)
+education <-c(11,12,12,10,11,12,12,16,12,10,16,16,13,12,13,17,12,14,13,14)
+married <- c("divorced","separated","separated","married","married","separated","married","married","married","separated","married","married","divorced",
+    "married","never","married","married","married","never","married")
+married <- as.factor(married)
+PSID2 <- data.frame(earnings,age,education,married)
 
 `@sample_code`
 ```{r}
