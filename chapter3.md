@@ -425,7 +425,7 @@ Now let's select elements not only by subset conditions on the rows, but also on
 
 `@instructions`
 Using the `fuelecon2` data frame
-- Create a dataframe called `tencyl` containing the columns `make`,`model`, and `mpg` of `fuelecon2` for cars with 8 or more cylinders.
+- Create a dataframe called `large.cyl.mpg` containing the columns `make`,`model`, and `mpg` of `fuelecon2` for cars with 8 or more cylinders.
 - Display `large.cyl.mpg`
 
 `@hint`
@@ -445,29 +445,29 @@ fuelecon2 <-data.frame(make,model,year,mpg,cyl,drive)
 
 `@sample_code`
 ```{r}
-# Create 'tencyl'
+# Create 'large.cyl.mpg'
 
 
-# Display 'tencyl'
+# Display 'large.cyl.mpg'
 
 
 ```
 
 `@solution`
 ```{r}
-# Create 'tencyl'
-tencyl <- fuelecon2[(cyl >=10),c("make","model","mpg")]
+# Create 'large.cyl.mpg'
+large.cyl.mpg <- fuelecon2[(cyl >=8),c("make","model","mpg")]
 
-# Display 'tencyl'
-tencyl
+# Display 'large.cyl.mpg'
+large.cyl.mpg
 
 ```
 
 `@sct`
 ```{r}
-test_object("tencyl", undefined_msg = "Did you save the selection as `tencyl`?", incorrect_msg = "Your subset conditions for tencyl are not correct!")
+test_object("large.cyl.mpg", undefined_msg = "Did you save the selection as `large.cyl.mpg`?", incorrect_msg = "Your subset conditions for large.cyl.mpg are not correct!")
 
-test_output_contains("tencyl", incorrect_msg = "You have not displayed `tencyl`")
+test_output_contains("large.cyl.mpg", incorrect_msg = "You have not displayed `large.cyl.mpg`")
 
 success_msg("Good job!")
 ```
