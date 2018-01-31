@@ -363,8 +363,8 @@ Now let's practice selecting elements from a data frame using bracket arguments 
 
 `@instructions`
 Using the `PSID2` data frame:
--Display the first row of observations. 
-- Select only observations where individual's `age` is less than 40 and marital status (`married`) is coded as "never". Define this subset as `PSID.u40.unmarried`.
+- Display the first row of observations. 
+- Select only observations where `age` is less than 40 and marital status (`married`) is coded as "never".  Define this subset as `PSID.u40.unmarried`.
 
 `@hint`
 
@@ -380,6 +380,7 @@ education <-c(11,12,12,10,11,12,12,16,12,10,16,16,13,12,13,17,12,14,13,14)
 married <- c("divorced","separated","separated","married","married","separated","married","married","married","separated","married","married","divorced",
     "married","never","married","married","married","never","married")
 PSID2 <- data.frame(earnings,age,education,married)
+```
 
 `@sample_code`
 ```{r}
