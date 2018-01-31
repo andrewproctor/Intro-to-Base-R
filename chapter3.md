@@ -411,3 +411,55 @@ test_output_contains("PSID2[1,]", incorrect_msg = "Have you correctly selected a
 
 success_msg("Good job!")
 ```
+---
+## Selection of data frame elements (2)
+
+```yaml
+type: NormalExercise
+xp: 100
+skills: 1
+key: 63264c6763
+```
+
+Now let's select elements not only by subset conditions on the rows, but also on columns.
+
+`@instructions`
+Using the `PSID2` data frame:
+- Display the first row of observations. 
+- Select only observations where `age` is less than 40 and marital status (`married`) is coded as "never".  Define this subset as `PSID.u40.unmarried`.
+
+`@hint`
+
+- To display the first row of a dataframe `x`, simply enter `x[1,]`.
+- To assign the subset to a new data frame called `mysubset`, the code would be `mysubset <- x[1,]`.
+- Remember you can used the AND operator (`&`) to place multiple conditions on the rows.
+
+`@pre_exercise_code`
+```{r}
+```
+
+`@sample_code`
+```{r}
+# Display the first row of the data
+
+
+# Save the subset of observations with age < 40 & married equal to 'never' as a data framed called PSID.u40.unmarried
+
+
+
+```
+
+`@solution`
+```{r}
+# Display the first row of the data
+
+# Save the subset of observations with age less than 40 and marital status equal to 'never' as a data framed called PSID.u40.unmarried
+
+
+```
+
+`@sct`
+```{r}
+
+success_msg("Good job!")
+```
