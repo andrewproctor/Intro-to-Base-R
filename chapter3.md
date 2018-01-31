@@ -424,42 +424,50 @@ key: 63264c6763
 Now let's select elements not only by subset conditions on the rows, but also on columns.
 
 `@instructions`
-Using the `PSID2` data frame:
-- Display the first row of observations. 
-- Select only observations where `age` is less than 40 and marital status (`married`) is coded as "never".  Define this subset as `PSID.u40.unmarried`.
+Using the `fuelecon2` data frame
+- Create a dataframe called `tencyl` containing the columns `make`,`model`, and `mpg` of `fuelecon2` for cars with 8 or more cylinders.
+- Display `large.cyl.mpg`
 
 `@hint`
 
-- To display the first row of a dataframe `x`, simply enter `x[1,]`.
-- To assign the subset to a new data frame called `mysubset`, the code would be `mysubset <- x[1,]`.
-- Remember you can used the AND operator (`&`) to place multiple conditions on the rows.
+- Use the `c()` function to select multiple columns in your bracket.
 
 `@pre_exercise_code`
 ```{r}
+make <- c("Saturn","Nissan","BMW","Audi","Honda","Kia","Mazda","Lamborghini","Subaru","Volkswagen")
+model <- c("Ion","Titan","Z4","S6","Civic","Optima Hybrid","RX8","Gallardo","Outback","Jetta")
+year <- c(2006,2012,2005,2009,2010,2012,2006,2010,2007,2007)
+cyl <- c(4,8,6,10,4,4,2,10,4,5)
+drive <- c("Front-Wheel Drive","All-Wheel Drive","Rear-Wheel Drive","All-Wheel Drive","Front-Wheel Drive","Front-Wheel Drive","Rear-Wheel Drive","All-Wheel Drive","All-Wheel Drive","Front-Wheel Drive")
+mpg <- c(31,17,26,19,36,39,22,20,26,28)
+fuelecon2 <-data.frame(make,model,year,mpg,cyl,drive)
 ```
 
 `@sample_code`
 ```{r}
-# Display the first row of the data
+# Create 'tencyl'
 
 
-# Save the subset of observations with age < 40 & married equal to 'never' as a data framed called PSID.u40.unmarried
-
+# Display 'tencyl'
 
 
 ```
 
 `@solution`
 ```{r}
-# Display the first row of the data
+# Create 'tencyl'
+tencyl <- fuelecon2[(cyl >=10),c("make","model","mpg")]
 
-# Save the subset of observations with age less than 40 and marital status equal to 'never' as a data framed called PSID.u40.unmarried
-
+# Display 'tencyl'
+tencyl
 
 ```
 
 `@sct`
 ```{r}
+test_object("tencyl", undefined_msg = "Did you save the selection as `tencyl`?", incorrect_msg = "Your subset conditions for tencyl are not correct!")
+
+test_output_contains("tencyl", incorrect_msg = "You have not displayed `tencyl`")
 
 success_msg("Good job!")
 ```
