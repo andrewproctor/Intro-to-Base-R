@@ -412,7 +412,7 @@ test_output_contains("PSID2[1,]", incorrect_msg = "Have you correctly selected a
 success_msg("Good job!")
 ```
 ---
-## Selection of data frame elements (2)
+## Selection of data frame elements II
 
 ```yaml
 type: NormalExercise
