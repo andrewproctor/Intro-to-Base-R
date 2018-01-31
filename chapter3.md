@@ -6,24 +6,6 @@ description : Practice with Data Frames, heterogeneous two-dimension data object
 ## Creating a data frame 
 
 ```yaml
-type: TabExercise
-key: 54b1efd4a9
-lang: r
-xp: 50
-```
-
-
-`@pre_exercise_code`
-```{r}
-```
-
-`@sample_code`
-```{r}
-
-```
-
-***
-```yaml
 type: NormalExercise
 xp: 150
 skills: 1
