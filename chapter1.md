@@ -309,13 +309,6 @@ b <- "forty two"
 
 ```
 
-`@sample_code`
-```{r}
-# Display object b
-
-
-```
-
 ***
 
 ### Display variable b:
@@ -327,7 +320,13 @@ key: 502b6d5d72
 ```
 
 `@instructions`
-- Display object b.
+- Display object b (commenting your code to explain this)
+
+`@sample_code`
+```{r}
+
+
+```
 
 `@solution`
 ```{r}
@@ -342,6 +341,7 @@ b
 `@sct`
 ```{r}
 test_output_contains("b", incorrect_msg = "Make sure to print the variable b.")
+test_student_typed("#)", not_typed_msg = "Make sure to add a comment explaining what you're doing.")
 
 success_msg("Good job!")
 

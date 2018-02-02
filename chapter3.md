@@ -280,7 +280,7 @@ This is readily accomodated in R by the use of factor *ordering*.  Let's try an 
 `@instructions`
 - First, view the structure of the PSID data frame already saved in the environment.
 
-- Change `education` so that it is an ordered factor with the following ordering: `elementary`, `middle`, `HS`, `bachelors`, `masters`
+- Change `education` so that it is an ordered factor with the following ordering: `elementary`, `middle`, `hs`, `bachelors`, `masters`
 
 - Look at the structure of PSID again to see how it's changed.
 

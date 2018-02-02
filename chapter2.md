@@ -143,7 +143,7 @@ success_msg("Great!")
 
 
 *** =instructions
-- Create a matrix of randomly sampled values from a normal distribution.  There should be 3 rows and 3 columns.  Call it  <code>norm_matrix</code>.
+- Create a matrix of randomly sampled values from a normal distribution.  There should be 3 rows and 3 columns, with the data filled in by row.  Call it  <code>norm_matrix</code>.
 - You can generate a random sample of *n* values from the standard normal distribution is: <code>rnorm(n)</code>.
 
 *** =hint
