@@ -109,9 +109,9 @@ x <- log(5^2-8)
 
 
 `@instructions`
-- Now create a new variable, ***y*** equal to the remainder of 12 / 5.
-- Create a new variable z, equal to x times y.
-- Display the value of z.
+- Now create a new variable, `y` equal to the remainder of 12 / 5, using the modulo operator:  <code> %% </code>.
+- Create a new variable `z`, equal to x times y.
+- Display the value of `z`.
 
 `@hint`
 - The remainder (or modulo) is indicated in R by %%.
@@ -173,7 +173,6 @@ a <- "false"
 
 `@sample_code`
 ```{r}
-# Display object a
 
 
 ```
@@ -189,7 +188,7 @@ key: cee78970e4
 ```
 
 `@instructions`
-- Display object a.
+- Display object `a` (commenting your code appropriately).
 
 `@solution`
 ```{r}
@@ -204,7 +203,7 @@ a
 `@sct`
 ```{r}
 test_output_contains("a", incorrect_msg = "Make sure to print the variable a.")
-
+test_student_typed("#", not_typed_msg = "Make sure to add a comment to explain what you're doing.")
 success_msg("Good job!")
 
 ```
@@ -221,11 +220,10 @@ key: 482a6c9639
 
 `@instructions`
 
-- Check if *a* is logical.
+- Check if `a` is logical (commenting your code appropriately).
 
 `@sample_code`
 ```{r}
-# Determine the data type of object a
 
 
 ```
@@ -248,6 +246,7 @@ class(a)
 test_or(test_function("str","object"),
         test_function("class","x"),
      incorrect_msg = "Have you passed the correct variable to the function?")
+test_student_typed("#", not_typed_msg = "Make sure to add a comment to explain what you're doing.")
 success_msg("Nice job!")
               
 ```
@@ -264,11 +263,10 @@ key: 1494a0adbd
 
 `@instructions`
 
-- Convert *a* so that it is logical object.
+- Convert `a` so that it is logical object (commenting your code appropriately).
 
 `@sample_code`
 ```{r}
-# Make a logical
 
 
 ```
@@ -288,6 +286,7 @@ a <- FALSE
 ```{r}
 test_object("a", undefined_msg = "Make sure to define a variable `a`.",
             incorrect_msg = "Make sure that you assign the correct value to `a`.") 
+test_student_typed("#", not_typed_msg = "Make sure to add a comment to explain what you're doing.")
 success_msg("Nice job!")
               
 ```
@@ -320,7 +319,7 @@ key: 502b6d5d72
 ```
 
 `@instructions`
-- Display object b (commenting your code to explain this)
+- Display object `b` (commenting your code appropriately)
 
 `@sample_code`
 ```{r}
@@ -341,8 +340,7 @@ b
 `@sct`
 ```{r}
 test_output_contains("b", incorrect_msg = "Make sure to print the variable b.")
-test_student_typed("#)", not_typed_msg = "Make sure to add a comment explaining what you're doing.")
-
+test_student_typed("#", not_typed_msg = "Make sure to add a comment to explain what you're doing.")
 success_msg("Good job!")
 
 ```
@@ -359,12 +357,10 @@ key: f217afbbda
 
 `@instructions`
 
-- Check if *b* is numeric.
+- Check if `b` is numeric.
 
 `@sample_code`
 ```{r}
-# Determine the data type of object b
-
 
 ```
 
@@ -386,6 +382,7 @@ class(b)
 test_or(test_function("str","object"),
         test_function("class","x"),
      incorrect_msg = "Have you passed the correct variable to the function?")
+test_student_typed("#", not_typed_msg = "Make sure to add a comment to explain what you're doing.")
 success_msg("Nice job!")
               
 ```
@@ -402,11 +399,10 @@ key: b93ed45091
 
 `@instructions`
 
-- Convert *b* so that it is numeric.
+- Convert `b` so that it is numeric.
 
 `@sample_code`
 ```{r}
-# Make b numeric
 
 
 ```
@@ -427,6 +423,7 @@ b <- 42
 ```{r}
 test_object("b", undefined_msg = "Make sure to define a variable `b`.",
             incorrect_msg = "Make sure that you assign the correct value to `b`.") 
+test_student_typed("#", not_typed_msg = "Make sure to add a comment to explain what you're doing.")
 success_msg("Nice job!")
               
 ```

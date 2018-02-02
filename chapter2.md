@@ -8,11 +8,11 @@ description : Exercises focused on one-dimension data objects (vectors) and homo
 
 *** =instructions
 
-- Create a vector called *numbers* with the following elements: 1,2,3,4,5
+- Create a vector called `numbers` with the following elements: 1,2,3,4,5
 
 *** =hint
 
-To create a vector, pass the elements into the function c(), which stands for combined values. 
+To create a vector, pass the elements into the function <code>c()</code>, which stands for combined values. 
 
 *** =pre_exercise_code
 ```{r}
@@ -56,11 +56,11 @@ success_msg("Great!")
 
 *** =instructions
 
-- Create a vector called *animals* with the following elements: dog, cat, tiger, lion, panda, wolf.
+- Create a vector called `animals` with the following elements: `dog`, `cat`, `tiger`, `lion`, `panda`, `wolf`.
 
 *** =hint
 
-String elements (like words) should be listed in quotes as arguments for c().
+String elements (like words) should be listed in quotes as arguments for <code>c()</code>.
 
 *** =pre_exercise_code
 ```{r}
@@ -108,7 +108,7 @@ To prepare, look over the helpfile for the <code>matrix</code> function.
 
 *** =hint
 
-- You can access the help file two different ways, through ?FUNCTION or help(FUNCTION).
+- You can access the help file two different ways, through <code>?FUNCTION</code> or <code>help(FUNCTION)</code>.
 
 *** =pre_exercise_code
 ```{r}
@@ -143,11 +143,11 @@ success_msg("Great!")
 
 
 *** =instructions
-- Create a matrix of randomly sampled values from a normal distribution.  There should be 3 rows and 3 columns, with the data filled in by row.  Call it  <code>norm_matrix</code>.
+- Create a matrix of randomly sampled values from a normal distribution.  There should be 3 rows and 3 columns, with the data filled in by row.  Call it  `norm_matrix`.
 - You can generate a random sample of *n* values from the standard normal distribution is: <code>rnorm(n)</code>.
 
 *** =hint
-To create a matrix, use the <code>matrix()<\code> function. Remember to specify nrow, ncol, and "byrow=TRUE".
+To create a matrix, use the <code>matrix()</code> function. Remember to specify nrow, ncol, and "byrow=TRUE".
 
 *** =pre_exercise_code
 ```{r}
