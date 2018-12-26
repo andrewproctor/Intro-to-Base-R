@@ -1,15 +1,15 @@
 ---
-title       : Data Frames, Factors, and Selections
-description : Practice with Data Frames, heterogeneous two-dimension data objects, including how to define factors and create selections of a data frame.
-
+title: 'Data Frames, Factors, and Selections'
+description: 'Practice with Data Frames, heterogeneous two-dimension data objects, including how to define factors and create selections of a data frame.'
 ---
-## Creating a data frame 
+
+## Creating a data frame
 
 ```yaml
 type: NormalExercise
-xp: 150
-skills: 1
 key: df0b89706d90526b3c0bbe15e400b74cbd900704
+xp: 100
+skills: 1
 ```
 
 While matrices are appropriate for homogenous data (ie numeric data), most of data objects will contain a mixture of data classes. The basic data object in R that does this is the "data frame."
@@ -78,20 +78,21 @@ test_object("PSID", undefined_msg = "You haven't create the PSID object as a dat
 
 success_msg("Great job!");
 ```
+
 ---
+
 ## Creating and expanding a data frame
 
 ```yaml
 type: NormalExercise
+key: c13ea421dd078030a225f49e53a8927ce8fefbe0
 xp: 100
 skills: 1
-key: c13ea421dd078030a225f49e53a8927ce8fefbe0
 ```
 
 Based off of vehicle fuel economy data from the Environment Protection Agency, the following vectors have already been crated for you:  `make`, `model`,`year`, `cylinder`, `drive`, and `mpg`.
 
 Using these vectors, once again make a data frame and then add columns to it.
-
 
 `@instructions`
 - Create a dataframe called **fuelecon1** from the following vectors:  `make`, `model`, `year`, and `mpg`.
@@ -142,23 +143,23 @@ success_msg("Awesome!")
 ```
 
 ---
+
 ## Viewing the structure of a data frame
 
 ```yaml
 type: NormalExercise
-xp: 50
-skills: 1
 key: 5dd038451f
+xp: 100
+skills: 1
 ```
 
-Similar to inspecting the class of vector, you will often want to look at how data is formatted within data frames.  
-
+Similar to inspecting the class of vector, you will often want to look at how data is formatted within data frames.
 
 `@instructions`
 Use the <code>str()</code> command to check out the structure of `fuelecon2`.
 
 `@hint`
-- The only argument of `str()` is the data object you would like to inspect!  
+- The only argument of `str()` is the data object you would like to inspect!
 
 `@pre_exercise_code`
 ```{r}
@@ -193,13 +194,14 @@ success_msg("Awesome!")
 ```
 
 ---
+
 ## Changing the structure of a data frame
 
 ```yaml
 type: NormalExercise
-xp: 50
+key: 6725886057
+xp: 100
 skills: 1
-key: '6725886057'
 ```
 
 Did you notice that the `drive` variable in `fuelecon2` has the character class?  Since the type of drive is a categorical variable, with possible values of "Rear-Wheel Drive", "Front-Wheel Drive", and "All-Wheel Drive", we should change the data type so that it is stored as a factor.
@@ -212,7 +214,7 @@ Just for practice, let's also change the class of `make` and `model` to characte
 - Change `drive` so that is formatted as factor.
 
 `@hint`
-- Use the functions `as.factor()` and `as.character()` to change data classes.  
+- Use the functions `as.factor()` and `as.character()` to change data classes.
 
 `@pre_exercise_code`
 ```{r}
@@ -264,13 +266,14 @@ success_msg("Awesome!")
 ```
 
 ---
+
 ## Using ordered factors
 
 ```yaml
 type: NormalExercise
+key: 88d3164325
 xp: 100
 skills: 1
-key: 88d3164325
 ```
 
 Since factor variables represent categorical variables, it makes sense to distinguish between cases where there is no underlying quantitative relationship between values (ie *qualitative data*) and data where there is intrinsic ordering of values (*ordinal data*) 
@@ -331,14 +334,16 @@ test_output_contains("str(PSID$education)", incorrect_msg = "Have you correctly 
 
 success_msg("Awesome!")
 ```
+
 ---
+
 ## Selection of data frame elements
 
 ```yaml
 type: NormalExercise
+key: 8c664726b8a173cda730cbb20a52ac1795d9a0e9
 xp: 100
 skills: 1
-key: 8c664726b8a173cda730cbb20a52ac1795d9a0e9
 ```
 
 Now let's practice selecting elements from a data frame using bracket arguments (eg `mydf[,]`).  For this exercise, you'll be using a larger sample from the same PSID dataset, `PSID2`.
@@ -349,7 +354,6 @@ Using the `PSID2` data frame:
 - Select only observations where `age` is less than 40 and marital status (`married`) is coded as "never".  Define this subset as `PSID.u40.unmarried`.
 
 `@hint`
-
 - To display the first row of a dataframe `x`, simply enter `x[1,]`.
 - To assign the subset to a new data frame called `mysubset`, the code would be `mysubset <- x[1,]`.
 - Remember you can used the AND operator (`&`) to place multiple conditions on the rows.
@@ -393,14 +397,16 @@ test_output_contains("PSID2[1,]", incorrect_msg = "Have you correctly selected a
 
 success_msg("Good job!")
 ```
+
 ---
+
 ## Selection of data frame elements II
 
 ```yaml
 type: NormalExercise
+key: 63264c6763
 xp: 100
 skills: 1
-key: 63264c6763
 ```
 
 Now let's select elements not only by subset conditions on the rows, but also on columns.
@@ -411,7 +417,6 @@ Using the `fuelecon2` data frame
 - Display `large.cyl.mpg`
 
 `@hint`
-
 - Use the `c()` function to select multiple columns in your bracket.
 
 `@pre_exercise_code`
