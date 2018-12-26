@@ -1,25 +1,30 @@
 ---
-title       : Basic objects and operations
-description : Introduction to basic math operations in R, variables, and data types.
-attachments :
-  slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
-
+title: 'Basic objects and operations'
+description: 'Introduction to basic math operations in R, variables, and data types.'
+attachments:
+    slides_link: 'https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf'
 ---
 
 ## Calculate a value.
 
 ```yaml
 type: NormalExercise
-xp: 100
 key: bc36446b49
+xp: 100
 ```
+
+
 
 `@instructions`
 - Without defining a new variable, calculate the log of (5 squared - 8).
 
-
 `@hint`
 You can take the log by using log() function.
+
+`@pre_exercise_code`
+```{r}
+
+```
 
 `@sample_code`
 ```{r}
@@ -42,19 +47,15 @@ success_msg("Great!")
 
 ---
 
-
 ## Define a variable.
 
 ```yaml
 type: NormalExercise
-xp: 100
 key: eda3643137
+xp: 100
 ```
 
-`@pre_exercise_code`
-```{r}
-# no pec
-```
+
 
 `@instructions`
 - Create a new variable, called ***x***, equal to the log of (5 squared - 8).
@@ -62,6 +63,11 @@ key: eda3643137
 
 `@hint`
 You can print a variable just by entering it alone on a line.
+
+`@pre_exercise_code`
+```{r}
+# no pec
+```
 
 `@sample_code`
 ```{r}
@@ -91,21 +97,16 @@ test_output_contains("2.833213", incorrect_msg = "Make sure to print the variabl
 success_msg("Great!")
 ```
 
-
 ---
 
 ## Operations on Variables
 
 ```yaml
 type: NormalExercise
-xp: 100
 key: 2c80ac45d5
+xp: 100
 ```
 
-`@pre_exercise_code`
-```{r}
-x <- log(5^2-8)
-```
 
 
 `@instructions`
@@ -115,6 +116,11 @@ x <- log(5^2-8)
 
 `@hint`
 - The remainder (or modulo) is indicated in R by %%.
+
+`@pre_exercise_code`
+```{r}
+x <- log(5^2-8)
+```
 
 `@sample_code`
 ```{r}
@@ -152,9 +158,8 @@ success_msg("Great!")
 
 ```
 
-
-
 ---
+
 ## Data Types
 
 ```yaml
@@ -163,6 +168,7 @@ key: 54b1efd4a9
 lang: r
 xp: 100
 ```
+
 
 
 `@pre_exercise_code`
@@ -179,16 +185,22 @@ a <- "false"
 
 ***
 
-### Display variable a:
-
 ```yaml
 type: NormalExercise
-xp: 50
 key: cee78970e4
+xp: 35
 ```
 
 `@instructions`
 - Display object `a` (commenting your code appropriately).
+
+`@hint`
+- To display an object, just enter it on a seperate line.
+
+`@sample_code`
+```{r}
+
+```
 
 `@solution`
 ```{r}
@@ -196,9 +208,6 @@ key: cee78970e4
 a
 
 ```
-
-`@hint`
-- To display an object, just enter it on a seperate line.
 
 `@sct`
 ```{r}
@@ -210,17 +219,17 @@ success_msg("Good job!")
 
 ***
 
-### Checking data type
-
 ```yaml
 type: NormalExercise
-xp: 50
 key: 482a6c9639
+xp: 35
 ```
 
 `@instructions`
-
 - Check if `a` is logical (commenting your code appropriately).
+
+`@hint`
+- To check the type of an object, you can use class() or str().
 
 `@sample_code`
 ```{r}
@@ -228,18 +237,13 @@ key: 482a6c9639
 
 ```
 
-
 `@solution`
 ```{r}
 # Determine the data type of object a
 str(a)
 class(a)
-
+is.logical(a)
 ```
-
-`@hint`
-
-- To check the type of an object, you can use class() or str().
 
 `@sct`
 ```{r}
@@ -253,17 +257,17 @@ success_msg("Nice job!")
 
 ***
 
-### Converting to logical 
-
 ```yaml
 type: NormalExercise
-xp: 50
 key: 1494a0adbd
+xp: 30
 ```
 
 `@instructions`
-
 - Convert `a` so that it is logical object (commenting your code appropriately).
+
+`@hint`
+- Logical values are in all caps, eg TRUE or FALSE.
 
 `@sample_code`
 ```{r}
@@ -271,16 +275,11 @@ key: 1494a0adbd
 
 ```
 
-
 `@solution`
 ```{r}
 # Make a logical
 a <- FALSE
 ```
-
-`@hint`
-
-- Logical values are in all caps, eg TRUE or FALSE.
 
 `@sct`
 ```{r}
@@ -292,6 +291,7 @@ success_msg("Nice job!")
 ```
 
 ---
+
 ## Data Types II
 
 ```yaml
@@ -302,6 +302,7 @@ xp: 100
 ```
 
 
+
 `@pre_exercise_code`
 ```{r}
 b <- "forty two"
@@ -310,16 +311,17 @@ b <- "forty two"
 
 ***
 
-### Display variable b:
-
 ```yaml
 type: NormalExercise
-xp: 50
 key: 502b6d5d72
+xp: 35
 ```
 
 `@instructions`
 - Display object `b` (commenting your code appropriately)
+
+`@hint`
+- To display an object, just enter it on a seperate line.
 
 `@sample_code`
 ```{r}
@@ -334,9 +336,6 @@ b
 
 ```
 
-`@hint`
-- To display an object, just enter it on a seperate line.
-
 `@sct`
 ```{r}
 test_output_contains("b", incorrect_msg = "Make sure to print the variable b.")
@@ -347,23 +346,22 @@ success_msg("Good job!")
 
 ***
 
-### Logical Data Type
-
 ```yaml
 type: NormalExercise
-xp: 50
 key: f217afbbda
+xp: 35
 ```
 
 `@instructions`
-
 - Check if `b` is numeric.
+
+`@hint`
+- To check the type of an object, you can use class() or str().
 
 `@sample_code`
 ```{r}
 
 ```
-
 
 `@solution`
 ```{r}
@@ -372,10 +370,6 @@ str(b)
 class(b)
 
 ```
-
-`@hint`
-
-- To check the type of an object, you can use class() or str().
 
 `@sct`
 ```{r}
@@ -389,17 +383,17 @@ success_msg("Nice job!")
 
 ***
 
-### Converting to logical 
-
 ```yaml
 type: NormalExercise
-xp: 50
 key: b93ed45091
+xp: 30
 ```
 
 `@instructions`
-
 - Convert `b` so that it is numeric.
+
+`@hint`
+- Numeric values are defined in numbers (not text), without quotes.
 
 `@sample_code`
 ```{r}
@@ -407,17 +401,12 @@ key: b93ed45091
 
 ```
 
-
 `@solution`
 ```{r}
 # Make b numeric
 b <- 42
 
 ```
-
-`@hint`
-
-- Numeric values are defined in numbers (not text), without quotes.
 
 `@sct`
 ```{r}
