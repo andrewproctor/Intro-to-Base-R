@@ -264,7 +264,7 @@ xp: 30
 ```
 
 `@instructions`
-- Convert `a` so that it is logical object (commenting your code appropriately).
+- Redefine `a` so that it is logical object (commenting your code appropriately).
 
 `@hint`
 - Logical values are in all caps, eg TRUE or FALSE.
