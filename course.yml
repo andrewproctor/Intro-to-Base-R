@@ -1,5 +1,6 @@
-title            : Intro to Base R
-description      : Introduction to programming essentials in the basic R environment.
-university       : Stockholm School of Economics
-difficulty_level : 2
-time_needed      : 1.5 hours
+title: "Intro to Base R"
+description: "Introduction to programming essentials in the basic R environment."
+university: "Stockholm School of Economics"
+difficulty_level: 2
+time_needed: "1.5 hours"
+programming_language: "r"
