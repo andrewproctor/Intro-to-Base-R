@@ -390,7 +390,7 @@ xp: 30
 ```
 
 `@instructions`
-- Convert `b` so that it is numeric.
+- Redefine `b` so that it is numeric.
 
 `@hint`
 - Numeric values are defined in numbers (not text), without quotes.
